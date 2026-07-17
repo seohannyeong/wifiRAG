@@ -3,9 +3,9 @@ import json
 import pdfplumber
 
 
-base_dir = Path(__file__).parent
-pdf_path = base_dir / "survey on RAG2.pdf"
-output_path = base_dir / "survey_on_rag2_pages_pdfplumber.jsonl"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+pdf_path = PROJECT_ROOT / "data" / "raw" / "survey on RAG2.pdf"
+output_path = PROJECT_ROOT / "data" / "interim" / "survey_on_rag2_pages_pdfplumber.jsonl"
 
 with pdfplumber.open(pdf_path) as pdf:
     with output_path.open("w", encoding="utf-8") as f:

@@ -3,9 +3,9 @@ import json
 from pdfreader import SimplePDFViewer
 
 
-base_dir = Path(__file__).parent
-pdf_path = base_dir / "survey on RAG2.pdf"
-output_path = base_dir / "survey_on_rag2_pages_pdfreader.jsonl"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+pdf_path = PROJECT_ROOT / "data" / "raw" / "survey on RAG2.pdf"
+output_path = PROJECT_ROOT / "data" / "interim" / "survey_on_rag2_pages_pdfreader.jsonl"
 
 with pdf_path.open("rb") as pdf_file:
     viewer = SimplePDFViewer(pdf_file)

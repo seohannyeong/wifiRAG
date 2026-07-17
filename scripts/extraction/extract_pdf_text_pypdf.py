@@ -2,9 +2,9 @@ from pathlib import Path
 import json
 from pypdf import PdfReader
 
-base_dir = Path(__file__).parent
-pdf_path = base_dir / "survey on RAG2.pdf"
-output_path = base_dir / "survey_on_rag2_pages_pypdf.jsonl"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+pdf_path = PROJECT_ROOT / "data" / "raw" / "survey on RAG2.pdf"
+output_path = PROJECT_ROOT / "data" / "interim" / "survey_on_rag2_pages_pypdf.jsonl"
 
 reader = PdfReader(str(pdf_path))
 

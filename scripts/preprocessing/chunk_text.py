@@ -2,9 +2,9 @@ from pathlib import Path
 import json
 
 
-BASE_DIR = Path(__file__).parent
-INPUT_PATH = BASE_DIR / "survey_on_rag2_pages_pypdf.jsonl"
-OUTPUT_PATH = BASE_DIR / "survey_on_rag2_chunks.jsonl"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+INPUT_PATH = PROJECT_ROOT / "data" / "interim" / "survey_on_rag2_pages_pypdf.jsonl"
+OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
 
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 150
