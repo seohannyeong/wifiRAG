@@ -22,6 +22,7 @@ experiments/    사용하지 않는 실험/비교 파일
 python .\scripts\extraction\extract_pdf_text_pypdf.py
 python .\scripts\preprocessing\chunk_text.py
 python .\scripts\retrieval\bm25_retriever.py "BM25 sparse retrieval" --top-k 3
+python .\scripts\retrieval\tfidf_retriever.py "BM25 sparse retrieval" --top-k 3
 ```
 
 ## Main Files
@@ -29,3 +30,5 @@ python .\scripts\retrieval\bm25_retriever.py "BM25 sparse retrieval" --top-k 3
 - `data/raw/survey on RAG2.pdf`
 - `data/interim/survey_on_rag2_pages_pypdf.jsonl`
 - `data/processed/survey_on_rag2_chunks.jsonl`
+- `scripts/retrieval/bm25_retriever.py`
+- `scripts/retrieval/tfidf_retriever.py`
