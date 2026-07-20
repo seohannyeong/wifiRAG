@@ -1,0 +1,520 @@
+[
+  {
+    "query": "BM25 sparse retrieval",
+    "results": {
+      "bm25": [
+        {
+          "score": 10.253596347237933,
+          "chunk_id": "survey_on_rag2_p4_c2",
+          "page": 4,
+          "chunk_index": 2,
+          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre- and post-retrieval enhancement, and database construction. 3.1.1 Retriever Type. Retrieval methods can be generally cate..."
+        },
+        {
+          "score": 7.752742099775924,
+          "chunk_id": "survey_on_rag2_p11_c1",
+          "page": 11,
+          "chunk_index": 1,
+          "preview": "given input. Regarding the retriever, it can be categorized into two types: 1) Sparse retriever [120, 125], and 2) Dense retriever [61, 69, 197]. The sparse retrievers usually exploit sparse features, e.g., word fre- quencies, to represent the documents and calculate the relevanc..."
+        },
+        {
+          "score": 6.722336279161416,
+          "chunk_id": "survey_on_rag2_p4_c7",
+          "page": 4,
+          "chunk_index": 7,
+          "preview": "[ 122], which may therefore excel for their versatility, meaning that they can transfer and generalize better to new domains or tasks. Such general- purpose pre-trained retrievers, e.g., Contriever [42] and Spider [118], would be more flexible to use in LLMs targeting on various..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.32058153060922906,
+          "chunk_id": "survey_on_rag2_p4_c2",
+          "page": 4,
+          "chunk_index": 2,
+          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre- and post-retrieval enhancement, and database construction. 3.1.1 Retriever Type. Retrieval methods can be generally cate..."
+        },
+        {
+          "score": 0.18908824025767312,
+          "chunk_id": "survey_on_rag2_p11_c1",
+          "page": 11,
+          "chunk_index": 1,
+          "preview": "given input. Regarding the retriever, it can be categorized into two types: 1) Sparse retriever [120, 125], and 2) Dense retriever [61, 69, 197]. The sparse retrievers usually exploit sparse features, e.g., word fre- quencies, to represent the documents and calculate the relevanc..."
+        },
+        {
+          "score": 0.15248832030299847,
+          "chunk_id": "survey_on_rag2_p4_c3",
+          "page": 4,
+          "chunk_index": 3,
+          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of offering supplementary to en- hance the input of the generator, sparse retrieval has also been used to find demonstratio..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.6839639007663937,
+          "chunk_id": "survey_on_rag2_p4_c2",
+          "page": 4,
+          "chunk_index": 2,
+          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre- and post-retrieval enhancement, and database construction. 3.1.1 Retriever Type. Retrieval methods can be generally cate..."
+        },
+        {
+          "score": 0.672501318227862,
+          "chunk_id": "survey_on_rag2_p4_c3",
+          "page": 4,
+          "chunk_index": 3,
+          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of offering supplementary to en- hance the input of the generator, sparse retrieval has also been used to find demonstratio..."
+        },
+        {
+          "score": 0.61856657808875,
+          "chunk_id": "survey_on_rag2_p11_c1",
+          "page": 11,
+          "chunk_index": 1,
+          "preview": "given input. Regarding the retriever, it can be categorized into two types: 1) Sparse retriever [120, 125], and 2) Dense retriever [61, 69, 197]. The sparse retrievers usually exploit sparse features, e.g., word fre- quencies, to represent the documents and calculate the relevanc..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "dense retrieval embedding",
+    "results": {
+      "bm25": [
+        {
+          "score": 8.465761314132338,
+          "chunk_id": "survey_on_rag2_p4_c4",
+          "page": 4,
+          "chunk_index": 4,
+          "preview": "and docu- ments into continuous vector space with certain criteria, for exam- ple, semantic similarity [61]. Dense retrieval methods are usually trainable, therefore holding more flexibility and potential in adap- tation. As the key component of dense retriever, the embedding mod..."
+        },
+        {
+          "score": 7.9204913117508795,
+          "chunk_id": "survey_on_rag2_p5_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "first symptom sign of a heart attack is sudden cardiac arrest. Angina pectoris is caused by a decrease in myocardial blood flow.  Figure 3: Illustration of the basic Retrieval-Augmented Large Language Models (RA-LLMs) framework for a specific QA task, which consists of three main..."
+        },
+        {
+          "score": 6.600249217581115,
+          "chunk_id": "survey_on_rag2_p6_c0",
+          "page": 6,
+          "chunk_index": 0,
+          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li on ad-hoc information retrieval datasets. Similarly, Gao et al. [40] propose Hypothetical Document Embedding (HyDE) method, which ins..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.2263599214977896,
+          "chunk_id": "survey_on_rag2_p4_c4",
+          "page": 4,
+          "chunk_index": 4,
+          "preview": "and docu- ments into continuous vector space with certain criteria, for exam- ple, semantic similarity [61]. Dense retrieval methods are usually trainable, therefore holding more flexibility and potential in adap- tation. As the key component of dense retriever, the embedding mod..."
+        },
+        {
+          "score": 0.1902150298174814,
+          "chunk_id": "survey_on_rag2_p5_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "first symptom sign of a heart attack is sudden cardiac arrest. Angina pectoris is caused by a decrease in myocardial blood flow.  Figure 3: Illustration of the basic Retrieval-Augmented Large Language Models (RA-LLMs) framework for a specific QA task, which consists of three main..."
+        },
+        {
+          "score": 0.14229202637378868,
+          "chunk_id": "survey_on_rag2_p4_c2",
+          "page": 4,
+          "chunk_index": 2,
+          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre- and post-retrieval enhancement, and database construction. 3.1.1 Retriever Type. Retrieval methods can be generally cate..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.7364318962825841,
+          "chunk_id": "survey_on_rag2_p4_c4",
+          "page": 4,
+          "chunk_index": 4,
+          "preview": "and docu- ments into continuous vector space with certain criteria, for exam- ple, semantic similarity [61]. Dense retrieval methods are usually trainable, therefore holding more flexibility and potential in adap- tation. As the key component of dense retriever, the embedding mod..."
+        },
+        {
+          "score": 0.684951889115503,
+          "chunk_id": "survey_on_rag2_p4_c3",
+          "page": 4,
+          "chunk_index": 3,
+          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of offering supplementary to en- hance the input of the generator, sparse retrieval has also been used to find demonstratio..."
+        },
+        {
+          "score": 0.6674472930689361,
+          "chunk_id": "survey_on_rag2_p11_c1",
+          "page": 11,
+          "chunk_index": 1,
+          "preview": "given input. Regarding the retriever, it can be categorized into two types: 1) Sparse retriever [120, 125], and 2) Dense retriever [61, 69, 197]. The sparse retrievers usually exploit sparse features, e.g., word fre- quencies, to represent the documents and calculate the relevanc..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "retrieval granularity chunk entity",
+    "results": {
+      "bm25": [
+        {
+          "score": 16.017889138861847,
+          "chunk_id": "survey_on_rag2_p5_c3",
+          "page": 5,
+          "chunk_index": 3,
+          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden for the database saving. Token retrieval is more suit- able in cases requiring rare patterns or out-of-domain data [ 62]..."
+        },
+        {
+          "score": 12.18898250608884,
+          "chunk_id": "survey_on_rag2_p4_c8",
+          "page": 4,
+          "chunk_index": 8,
+          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or other levels like entity. For RAG, the choice of retrieval 4"
+        },
+        {
+          "score": 8.628328802649273,
+          "chunk_id": "survey_on_rag2_p5_c2",
+          "page": 5,
+          "chunk_index": 2,
+          "preview": "4: Illustration of the retriever in RA-LLMs, which can be implemented in either dense or sparse manners, each with several key operations. granularity can significantly impact the overall performance of the model in terms of effectiveness and efficiency as they determine the savi..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.3865281304679261,
+          "chunk_id": "survey_on_rag2_p5_c3",
+          "page": 5,
+          "chunk_index": 3,
+          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden for the database saving. Token retrieval is more suit- able in cases requiring rare patterns or out-of-domain data [ 62]..."
+        },
+        {
+          "score": 0.36038530211459563,
+          "chunk_id": "survey_on_rag2_p4_c8",
+          "page": 4,
+          "chunk_index": 8,
+          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or other levels like entity. For RAG, the choice of retrieval 4"
+        },
+        {
+          "score": 0.20020479398624857,
+          "chunk_id": "survey_on_rag2_p5_c4",
+          "page": 5,
+          "chunk_index": 4,
+          "preview": "(E AE) model, which divides the parameter space of language models according to the entity identity. The proposed EAE model aims to learn entity representations from the text along with other model parameters with the Wikipedia database and represent knowledge with entity memory...."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8137480755036853,
+          "chunk_id": "survey_on_rag2_p4_c8",
+          "page": 4,
+          "chunk_index": 8,
+          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or other levels like entity. For RAG, the choice of retrieval 4"
+        },
+        {
+          "score": 0.7015456211230008,
+          "chunk_id": "survey_on_rag2_p5_c3",
+          "page": 5,
+          "chunk_index": 3,
+          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden for the database saving. Token retrieval is more suit- able in cases requiring rare patterns or out-of-domain data [ 62]..."
+        },
+        {
+          "score": 0.627234000000438,
+          "chunk_id": "survey_on_rag2_p4_c7",
+          "page": 4,
+          "chunk_index": 7,
+          "preview": "[ 122], which may therefore excel for their versatility, meaning that they can transfer and generalize better to new domains or tasks. Such general- purpose pre-trained retrievers, e.g., Contriever [42] and Spider [118], would be more flexible to use in LLMs targeting on various..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "query rewriting",
+    "results": {
+      "bm25": [
+        {
+          "score": 7.682093859935341,
+          "chunk_id": "survey_on_rag2_p6_c1",
+          "page": 6,
+          "chunk_index": 1,
+          "preview": "of the rewriting step is to clarify the retrieval need in the new query to ease the burden on the retrieval function to comprehend the input and enhance the output, i.e., retrieved relevant information. They have tested both the settings of using a frozen LLM and a trainable mode..."
+        },
+        {
+          "score": 5.895667901358188,
+          "chunk_id": "survey_on_rag2_p6_c0",
+          "page": 6,
+          "chunk_index": 0,
+          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li on ad-hoc information retrieval datasets. Similarly, Gao et al. [40] propose Hypothetical Document Embedding (HyDE) method, which ins..."
+        },
+        {
+          "score": 4.972078209599997,
+          "chunk_id": "survey_on_rag2_p16_c6",
+          "page": 16,
+          "chunk_index": 6,
+          "preview": "for Protein Representation Learning. bioRxiv (2023), 2023–02. [98] Xinbei Ma, Yeyun Gong, Pengcheng He, Hai Zhao, and Nan Duan. 2023. Query rewriting for retrieval-augmented large language models. arXiv preprint arXiv:2305.14283 (2023). [99] Seiji Maekawa, Hayate Iso, Sairam Gura..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.30902749050035416,
+          "chunk_id": "survey_on_rag2_p6_c1",
+          "page": 6,
+          "chunk_index": 1,
+          "preview": "of the rewriting step is to clarify the retrieval need in the new query to ease the burden on the retrieval function to comprehend the input and enhance the output, i.e., retrieved relevant information. They have tested both the settings of using a frozen LLM and a trainable mode..."
+        },
+        {
+          "score": 0.1809080671073343,
+          "chunk_id": "survey_on_rag2_p6_c0",
+          "page": 6,
+          "chunk_index": 0,
+          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li on ad-hoc information retrieval datasets. Similarly, Gao et al. [40] propose Hypothetical Document Embedding (HyDE) method, which ins..."
+        },
+        {
+          "score": 0.15463885303708796,
+          "chunk_id": "survey_on_rag2_p5_c5",
+          "page": 5,
+          "chunk_index": 5,
+          "preview": "output of the retriever. Wang et al. [156] propose a query expansion approach Query2doc, which generates pseudo-documents by few-shot prompting LLMs and expands the query with the relevant information in pseudo- documents to improve the query disambiguation and guide the retrieve..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.7194611139386444,
+          "chunk_id": "survey_on_rag2_p6_c1",
+          "page": 6,
+          "chunk_index": 1,
+          "preview": "of the rewriting step is to clarify the retrieval need in the new query to ease the burden on the retrieval function to comprehend the input and enhance the output, i.e., retrieved relevant information. They have tested both the settings of using a frozen LLM and a trainable mode..."
+        },
+        {
+          "score": 0.591672299336281,
+          "chunk_id": "survey_on_rag2_p6_c0",
+          "page": 6,
+          "chunk_index": 0,
+          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li on ad-hoc information retrieval datasets. Similarly, Gao et al. [40] propose Hypothetical Document Embedding (HyDE) method, which ins..."
+        },
+        {
+          "score": 0.5278620201909213,
+          "chunk_id": "survey_on_rag2_p6_c2",
+          "page": 6,
+          "chunk_index": 2,
+          "preview": "inspire the language model to rethink the generated results and enhance them. Com- pared to applying only the original query, such augmentation may contribute more relevant information retrieved from the corpus for the directly clarification of query-output relationships. Includi..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Self-RAG",
+    "results": {
+      "bm25": [
+        {
+          "score": 3.8745389877248657,
+          "chunk_id": "survey_on_rag2_p12_c4",
+          "page": 12,
+          "chunk_index": 4,
+          "preview": "nature of knowledge in the world, another model [152] further accesses large amounts of dynamic information in search engines to generate responses. 5.1.3 Fact Verification. Fact Verification is a critical task in veri- fying the accuracy and reliability of information. With the..."
+        },
+        {
+          "score": 2.7607023638196138,
+          "chunk_id": "survey_on_rag2_p14_c4",
+          "page": 14,
+          "chunk_index": 4,
+          "preview": "Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi. 2023. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. In The Twelfth International Conference on Learning Representations . [6] Sebastian Borgeaud, Arthur Mensch, Jordan Hoffmann, Trevor..."
+        },
+        {
+          "score": 2.742376836948998,
+          "chunk_id": "survey_on_rag2_p14_c3",
+          "page": 14,
+          "chunk_index": 3,
+          "preview": "al. 2023. Gpt-4 technical report. arXiv preprint arXiv:2303.08774 (2023). [2] Sweta Agrawal, Chunting Zhou, Mike Lewis, Luke Zettlemoyer, and Marjan Ghazvininejad. 2023. In-context Examples Selection for Machine Translation. In ACL (Findings). Association for Computational Lingui..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.13683408797133273,
+          "chunk_id": "survey_on_rag2_p12_c4",
+          "page": 12,
+          "chunk_index": 4,
+          "preview": "nature of knowledge in the world, another model [152] further accesses large amounts of dynamic information in search engines to generate responses. 5.1.3 Fact Verification. Fact Verification is a critical task in veri- fying the accuracy and reliability of information. With the..."
+        },
+        {
+          "score": 0.08170674117270077,
+          "chunk_id": "survey_on_rag2_p9_c1",
+          "page": 9,
+          "chunk_index": 1,
+          "preview": "re- trieved passages than on the relevant ones. Therefore, it is critical for RA-LLMs to accurately recall the prior knowledge while selec- tively incorporating retrieved information only when necessary, which is the path to robust RA-LLMs. Most existing methods determine the nec..."
+        },
+        {
+          "score": 0.08042330102198851,
+          "chunk_id": "survey_on_rag2_p4_c7",
+          "page": 4,
+          "chunk_index": 7,
+          "preview": "[ 122], which may therefore excel for their versatility, meaning that they can transfer and generalize better to new domains or tasks. Such general- purpose pre-trained retrievers, e.g., Contriever [42] and Spider [118], would be more flexible to use in LLMs targeting on various..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.5544534043065056,
+          "chunk_id": "survey_on_rag2_p14_c4",
+          "page": 14,
+          "chunk_index": 4,
+          "preview": "Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi. 2023. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. In The Twelfth International Conference on Learning Representations . [6] Sebastian Borgeaud, Arthur Mensch, Jordan Hoffmann, Trevor..."
+        },
+        {
+          "score": 0.5179968327092377,
+          "chunk_id": "survey_on_rag2_p3_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models Conference’17, July 2017, Washington, DC, USA 2019 2020 2021 2022 2023 2024 RAG Framework/Pipeline Retriever Learning RAG Learning Pre-/Post-Retrieval Technique RAG (Lewis, 2020) REALM (Guu, 2020) kNN..."
+        },
+        {
+          "score": 0.5123519250287957,
+          "chunk_id": "survey_on_rag2_p9_c1",
+          "page": 9,
+          "chunk_index": 1,
+          "preview": "re- trieved passages than on the relevant ones. Therefore, it is critical for RA-LLMs to accurately recall the prior knowledge while selec- tively incorporating retrieved information only when necessary, which is the path to robust RA-LLMs. Most existing methods determine the nec..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "How does RAG reduce hallucination?",
+    "results": {
+      "bm25": [
+        {
+          "score": 4.794649015368961,
+          "chunk_id": "survey_on_rag2_p2_c2",
+          "page": 2,
+          "chunk_index": 2,
+          "preview": "multi-modal fashion report generation [27]. LLMs also achieve promising performance in recommender systems by understanding users’ preferences to- wards items [154, 195]. Despite the success, LLMs still suffer from intrinsic limitations [194, 195], such as the lack of domain-spec..."
+        },
+        {
+          "score": 4.778641770954452,
+          "chunk_id": "survey_on_rag2_p16_c2",
+          "page": 16,
+          "chunk_index": 2,
+          "preview": "(1). Association for Computational Linguistics, 4582–4597. [84] Zonglin Li, Ruiqi Guo, and Sanjiv Kumar. 2022. Decoupled context processing for context augmented language modeling. Advances in Neural Information Processing Systems 35 (2022), 21698–21710. [85] Demiao Lin. 2024. Re..."
+        },
+        {
+          "score": 4.524500156294706,
+          "chunk_id": "survey_on_rag2_p2_c3",
+          "page": 2,
+          "chunk_index": 3,
+          "preview": "due to the substantial computational resources required for fine-tuning LLMs with domain-specific or the latest data. This, in turn, significantly hinders the widespread adoption of LLMs in various real-world applications. To address these limitations, recent efforts have been ma..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.07893632497110674,
+          "chunk_id": "survey_on_rag2_p2_c2",
+          "page": 2,
+          "chunk_index": 2,
+          "preview": "multi-modal fashion report generation [27]. LLMs also achieve promising performance in recommender systems by understanding users’ preferences to- wards items [154, 195]. Despite the success, LLMs still suffer from intrinsic limitations [194, 195], such as the lack of domain-spec..."
+        },
+        {
+          "score": 0.07659020348702525,
+          "chunk_id": "survey_on_rag2_p2_c3",
+          "page": 2,
+          "chunk_index": 3,
+          "preview": "due to the substantial computational resources required for fine-tuning LLMs with domain-specific or the latest data. This, in turn, significantly hinders the widespread adoption of LLMs in various real-world applications. To address these limitations, recent efforts have been ma..."
+        },
+        {
+          "score": 0.06656747229216305,
+          "chunk_id": "survey_on_rag2_p16_c2",
+          "page": 16,
+          "chunk_index": 2,
+          "preview": "(1). Association for Computational Linguistics, 4582–4597. [84] Zonglin Li, Ruiqi Guo, and Sanjiv Kumar. 2022. Decoupled context processing for context augmented language modeling. Advances in Neural Information Processing Systems 35 (2022), 21698–21710. [85] Demiao Lin. 2024. Re..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.5948847812629068,
+          "chunk_id": "survey_on_rag2_p14_c1",
+          "page": 14,
+          "chunk_index": 1,
+          "preview": "By enhancing the quality of the external knowledge and tailing robust mechanisms by filtering out low-quality or unreliable information, the RA-LLM systems might produce more accurate, reliable outputs, thereby improving their effectiveness in various real-world applications. 7 C..."
+        },
+        {
+          "score": 0.5943348170712773,
+          "chunk_id": "survey_on_rag2_p2_c3",
+          "page": 2,
+          "chunk_index": 3,
+          "preview": "due to the substantial computational resources required for fine-tuning LLMs with domain-specific or the latest data. This, in turn, significantly hinders the widespread adoption of LLMs in various real-world applications. To address these limitations, recent efforts have been ma..."
+        },
+        {
+          "score": 0.5924896543159505,
+          "chunk_id": "survey_on_rag2_p9_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models Conference’17, July 2017, Washington, DC, USA 3.4 Retrieval Augmentation Necessity and Frequency The retrieval operation in LLM-based generation generally aims to supplement knowledge to enhance gener..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What are training-free RAG methods?",
+    "results": {
+      "bm25": [
+        {
+          "score": 7.3679319890724155,
+          "chunk_id": "survey_on_rag2_p10_c1",
+          "page": 10,
+          "chunk_index": 1,
+          "preview": "Existing RA- LLMs approaches can be categorized into two classes: training-free approaches usually directly leverage retrieved information during the inference time by integrating the retrieved knowledge into the prompt, and training-based approaches fine-tune the retrieval and g..."
+        },
+        {
+          "score": 6.809994997258245,
+          "chunk_id": "survey_on_rag2_p9_c7",
+          "page": 9,
+          "chunk_index": 7,
+          "preview": "train retriever and generator simultaneously. In the following section, we will comprehensively review the training-free, independent training, sequential training, and joint training methods. The comparison of these different training methods is depicted in Figure 5. 4.1 Trainin..."
+        },
+        {
+          "score": 6.758750506544033,
+          "chunk_id": "survey_on_rag2_p9_c6",
+          "page": 9,
+          "chunk_index": 6,
+          "preview": "However, one potential challenge is that the retriever and generator components are not specifically optimized for downstream tasks, which could easily lead to sub-optimal utilization of the retrieved knowledge. To fully exploit the external knowledge, extensive methods are propo..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.18543869674115482,
+          "chunk_id": "survey_on_rag2_p9_c7",
+          "page": 9,
+          "chunk_index": 7,
+          "preview": "train retriever and generator simultaneously. In the following section, we will comprehensively review the training-free, independent training, sequential training, and joint training methods. The comparison of these different training methods is depicted in Figure 5. 4.1 Trainin..."
+        },
+        {
+          "score": 0.15467156335362953,
+          "chunk_id": "survey_on_rag2_p10_c1",
+          "page": 10,
+          "chunk_index": 1,
+          "preview": "Existing RA- LLMs approaches can be categorized into two classes: training-free approaches usually directly leverage retrieved information during the inference time by integrating the retrieved knowledge into the prompt, and training-based approaches fine-tune the retrieval and g..."
+        },
+        {
+          "score": 0.14577357756303655,
+          "chunk_id": "survey_on_rag2_p9_c8",
+          "page": 9,
+          "chunk_index": 8,
+          "preview": "[54, 57, 63], instead of relying solely on the implicit knowledge encoded in the model’s parameters. These approaches have shown significant performance improvement for various knowledge-intensive tasks, such as open-domain question answering [74]. According to the different ways..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.683085673881128,
+          "chunk_id": "survey_on_rag2_p9_c5",
+          "page": 9,
+          "chunk_index": 5,
+          "preview": "strat- egy, which retrieves information for the prediction of every token during the generation. Overall, applying different frequencies of re- trieval can impact both the effectiveness and efficiency of the whole RAG method. For example, more frequent retrieval leads to better p..."
+        },
+        {
+          "score": 0.6656349601465138,
+          "chunk_id": "survey_on_rag2_p10_c1",
+          "page": 10,
+          "chunk_index": 1,
+          "preview": "Existing RA- LLMs approaches can be categorized into two classes: training-free approaches usually directly leverage retrieved information during the inference time by integrating the retrieved knowledge into the prompt, and training-based approaches fine-tune the retrieval and g..."
+        },
+        {
+          "score": 0.6527394415125265,
+          "chunk_id": "survey_on_rag2_p11_c0",
+          "page": 11,
+          "chunk_index": 0,
+          "preview": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models Conference’17, July 2017, Washington, DC, USA 4.2 Independent Training Independent training refers to training the retriever and LLMs as two entirely independent processes, in which there is no intera..."
+        }
+      ]
+    }
+  }
+]

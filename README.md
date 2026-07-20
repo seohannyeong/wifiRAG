@@ -23,6 +23,8 @@ python .\scripts\extraction\extract_pdf_text_pypdf.py
 python .\scripts\preprocessing\chunk_text.py
 python .\scripts\retrieval\bm25_retriever.py "BM25 sparse retrieval" --top-k 3
 python .\scripts\retrieval\tfidf_retriever.py "BM25 sparse retrieval" --top-k 3
+python .\scripts\retrieval\dense_ollama_retriever.py "dense retrieval embedding" --top-k 3
+python .\scripts\evaluation\compare_retrievers.py --top-k 3
 ```
 
 ## Main Files
@@ -30,5 +32,21 @@ python .\scripts\retrieval\tfidf_retriever.py "BM25 sparse retrieval" --top-k 3
 - `data/raw/survey on RAG2.pdf`
 - `data/interim/survey_on_rag2_pages_pypdf.jsonl`
 - `data/processed/survey_on_rag2_chunks.jsonl`
+- `data/processed/survey_on_rag2_ollama_embeddings.json`
+- `data/processed/retriever_comparison.json`
 - `scripts/retrieval/bm25_retriever.py`
 - `scripts/retrieval/tfidf_retriever.py`
+- `scripts/retrieval/dense_ollama_retriever.py`
+- `scripts/evaluation/compare_retrievers.py`
+
+## Ollama Dense Retrieval
+
+Ollama를 사용하려면 Ollama 앱/서버가 실행 중이어야 하고 embedding 모델이 필요합니다.
+
+```powershell
+ollama pull nomic-embed-text
+python .\scripts\retrieval\dense_ollama_retriever.py "What is dense retrieval?" --top-k 3
+```
+
+첫 실행에서는 모든 chunk embedding을 생성하므로 시간이 걸립니다. 이후에는
+`data/processed/survey_on_rag2_ollama_embeddings.json` 캐시를 재사용합니다.
