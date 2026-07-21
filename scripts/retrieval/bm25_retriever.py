@@ -39,7 +39,11 @@ def load_chunks(path: Path) -> list[dict]:
 def build_bm25(chunks: list[dict]) -> BM25Okapi:
     tokenized_corpus = [tokenize(chunk["text"]) for chunk in chunks] #chunk 텍스트를 token리스트로 변환
     return BM25Okapi(tokenized_corpus) #토큰화된 chunk들을 BM25Okapi 인스턴스로 변환하여 BM25 인덱스를 생성
-
+# 1. 각 chunk의 길이
+# 2. 전체 chunk의 평균 길이
+# 3. 각 단어가 각 chunk에 몇 번 나오는지
+# 4. 각 단어가 전체 chunk 중 몇 개의 chunk에 등장하는지
+# 5. 각 단어의 IDF 값
 
 #query를 입력받아 BM25 점수를 계산하고, 점수가 높은 Top-k chunk를 반환하는 함수
 def search(query: str, chunks: list[dict], bm25: BM25Okapi, top_k: int) -> list[dict]:
