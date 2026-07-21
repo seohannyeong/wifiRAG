@@ -22,7 +22,7 @@ def tokenize(text: str) -> list[str]: # query와 chunk를 토큰화하는 함수
     return re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?", text.lower())
 #대소문자 차이 없앰
 #findall() 함수는 정규표현식에 매칭되는 모든 문자열을 찾아 리스트로 반환
-
+#Dense Retrieval is useful -> ['dense', 'retrieval', 'is', 'useful']
 
 #chunk jsonl파일 에서 chunk를 로드하는 함수
 def load_chunks(path: Path) -> list[dict]:

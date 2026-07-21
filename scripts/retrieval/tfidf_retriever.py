@@ -37,13 +37,14 @@ def load_chunks(path: Path) -> list[dict]:
 
 def build_tfidf(chunks: list[dict]) -> tuple[TfidfVectorizer, object]:
     documents = [chunk["text"] for chunk in chunks] #chunk 텍스트를 리스트로 변환
-    vectorizer = TfidfVectorizer( # TfidfVectorizer를 사용하여 TF-IDF 벡터 생성
+    vectorizer = TfidfVectorizer( # 전체 chunk를 보고 단어 사전을 만들고 각 단어의 IDF 값을 계산하고 각 chunk를 TF-IDF 벡터로 바꿔줌
         tokenizer=tokenize,
         lowercase=False,
         token_pattern=None,
     )
     matrix = vectorizer.fit_transform(documents) # TF-IDF 벡터를 학습하고, 각 chunk의 TF-IDF 벡터를 행렬로 변환
     return vectorizer, matrix
+#전체 chunk를 읽어서 어떤 단어들이 있는지 단어 사전을 만들고, 각 단어가 얼마나 희귀한지 IDF 값을 계산
 
 #query를 입력받아 TF-IDF 유사도를 계산하고, 점수가 높은 Top-k chunk를 반환하는 함수
 def search(

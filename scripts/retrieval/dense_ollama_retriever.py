@@ -67,6 +67,7 @@ def check_ollama(ollama_url: str, timeout: int) -> None:
 
 # Ollama 모델을 사용하여 텍스트를 임베딩하는 함수
 # openaiembedding은 품질 좋지만, 유료이므로 ollama embedding 모델을 사용
+#입력된 text를 Ollama embedding 모델에 보내고, 결과로 숫자 리스트 형태의 embedding vector를 받음
 def embed_text(text: str, model: str, ollama_url: str, timeout: int) -> list[float]:
     endpoint = f"{ollama_url.rstrip('/')}/api/embed"
     payload = {"model": model, "input": text}
