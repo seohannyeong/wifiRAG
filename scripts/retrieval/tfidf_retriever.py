@@ -6,6 +6,13 @@ import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+# 1. 문서(Chunk) 로드
+# 2. Token으로 분리
+# 3. TF-IDF 벡터 생성
+# 4. Query 입력
+# 5. Query도 Token으로 분리
+# 6. Query와 각 문서의 TF-IDF 유사도 계산
+# 7. 가장 높은 점수의 Top-k 문서 반환
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
@@ -13,6 +20,8 @@ CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl
 
 def tokenize(text: str) -> list[str]:
     return re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?", text.lower())
+#대소문자 차이 없앰
+#findall() 함수는 정규표현식에 매칭되는 모든 문자열을 찾아 리스트로 반환
 
 
 def load_chunks(path: Path) -> list[dict]:
@@ -27,16 +36,16 @@ def load_chunks(path: Path) -> list[dict]:
 
 
 def build_tfidf(chunks: list[dict]) -> tuple[TfidfVectorizer, object]:
-    documents = [chunk["text"] for chunk in chunks]
-    vectorizer = TfidfVectorizer(
+    documents = [chunk["text"] for chunk in chunks] #chunk 텍스트를 리스트로 변환
+    vectorizer = TfidfVectorizer( # TfidfVectorizer를 사용하여 TF-IDF 벡터 생성
         tokenizer=tokenize,
         lowercase=False,
         token_pattern=None,
     )
-    matrix = vectorizer.fit_transform(documents)
+    matrix = vectorizer.fit_transform(documents) # TF-IDF 벡터를 학습하고, 각 chunk의 TF-IDF 벡터를 행렬로 변환
     return vectorizer, matrix
 
-
+#query를 입력받아 TF-IDF 유사도를 계산하고, 점수가 높은 Top-k chunk를 반환하는 함수
 def search(
     query: str,
     chunks: list[dict],
@@ -44,9 +53,9 @@ def search(
     matrix: object,
     top_k: int,
 ) -> list[dict]:
-    query_vector = vectorizer.transform([query])
-    scores = cosine_similarity(query_vector, matrix).flatten()
-    ranked_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)
+    query_vector = vectorizer.transform([query]) #query를 TF-IDF 벡터로 변환
+    scores = cosine_similarity(query_vector, matrix).flatten()# query와 각 chunk의 TF-IDF 유사도 계산
+    ranked_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True) # 유사도 점수에 따라 chunk 인덱스를 내림차순으로 정렬
 
     results = []
     for index in ranked_indices[:top_k]:

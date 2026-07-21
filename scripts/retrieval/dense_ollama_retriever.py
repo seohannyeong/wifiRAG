@@ -27,6 +27,7 @@ def load_chunks(path: Path) -> list[dict]:
     return chunks
 
 
+#ollama 서버에 POST 요청을 보내고 JSON 응답을 반환하는 함수
 def post_json(url: str, payload: dict, timeout: int) -> dict:
     data = json.dumps(payload).encode("utf-8")
     request = urllib.request.Request(
@@ -45,7 +46,7 @@ def post_json(url: str, payload: dict, timeout: int) -> dict:
             f"at {DEFAULT_OLLAMA_URL}."
         ) from exc
 
-
+# Ollama 서버가 실행 중인지 확인하는 함수
 def check_ollama(ollama_url: str, timeout: int) -> None:
     url = f"{ollama_url.rstrip('/')}/api/tags"
     request = urllib.request.Request(url, method="GET")
@@ -59,7 +60,7 @@ def check_ollama(ollama_url: str, timeout: int) -> None:
             "embedding model such as 'nomic-embed-text'."
         ) from exc
 
-
+# Ollama 모델을 사용하여 텍스트를 임베딩하는 함수
 def embed_text(text: str, model: str, ollama_url: str, timeout: int) -> list[float]:
     endpoint = f"{ollama_url.rstrip('/')}/api/embed"
     payload = {"model": model, "input": text}
@@ -85,7 +86,7 @@ def embed_text(text: str, model: str, ollama_url: str, timeout: int) -> list[flo
         )
     return embedding
 
-
+# Cosine similarity 계산 함수
 def cosine_similarity(left: list[float], right: list[float]) -> float:
     dot = sum(a * b for a, b in zip(left, right))
     left_norm = math.sqrt(sum(a * a for a in left))
@@ -95,7 +96,7 @@ def cosine_similarity(left: list[float], right: list[float]) -> float:
         return 0.0
     return dot / (left_norm * right_norm)
 
-
+# 캐시된 임베딩이 현재 모델과 일치하는지 확인하는 함수
 def cache_matches(cache: dict, chunks: list[dict], model: str) -> bool:
     if cache.get("model") != model:
         return False
@@ -108,7 +109,7 @@ def cache_matches(cache: dict, chunks: list[dict], model: str) -> bool:
     cached_ids = [item.get("chunk_id") for item in cached_embeddings]
     return chunk_ids == cached_ids
 
-
+# Ollama dense embeddings를 생성하거나 캐시에서 로드하는 함수
 def build_or_load_embeddings(
     chunks: list[dict],
     model: str,

@@ -9,11 +9,22 @@ from rank_bm25 import BM25Okapi
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
 
+#bm25 동작 과정
+# 1. JSONL에서 chunk 로드
+# 2. 각 chunk를 token으로 분리
+# 3. BM25Okapi 인덱스 생성
+# 4. query 입력
+# 5. query도 token으로 분리
+# 6. 각 chunk의 BM25 점수 계산
+# 7. 점수가 높은 Top-k chunk 반환
 
-def tokenize(text: str) -> list[str]:
+def tokenize(text: str) -> list[str]: # query와 chunk를 토큰화하는 함수
     return re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?", text.lower())
+#대소문자 차이 없앰
+#findall() 함수는 정규표현식에 매칭되는 모든 문자열을 찾아 리스트로 반환
 
 
+#chunk jsonl파일 에서 chunk를 로드하는 함수
 def load_chunks(path: Path) -> list[dict]:
     chunks = []
 
@@ -26,14 +37,15 @@ def load_chunks(path: Path) -> list[dict]:
 
 
 def build_bm25(chunks: list[dict]) -> BM25Okapi:
-    tokenized_corpus = [tokenize(chunk["text"]) for chunk in chunks]
-    return BM25Okapi(tokenized_corpus)
+    tokenized_corpus = [tokenize(chunk["text"]) for chunk in chunks] #chunk 텍스트를 token리스트로 변환
+    return BM25Okapi(tokenized_corpus) #토큰화된 chunk들을 BM25Okapi 인스턴스로 변환하여 BM25 인덱스를 생성
 
 
+#query를 입력받아 BM25 점수를 계산하고, 점수가 높은 Top-k chunk를 반환하는 함수
 def search(query: str, chunks: list[dict], bm25: BM25Okapi, top_k: int) -> list[dict]:
-    tokenized_query = tokenize(query)
-    scores = bm25.get_scores(tokenized_query)
-    ranked_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)
+    tokenized_query = tokenize(query) #쿼리를 토큰화
+    scores = bm25.get_scores(tokenized_query) #BM25 점수 계산
+    ranked_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True) #점수가 높은 순서대로 정렬
 
     results = []
     for index in ranked_indices[:top_k]:
