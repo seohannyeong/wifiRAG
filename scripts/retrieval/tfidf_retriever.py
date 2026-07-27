@@ -2,9 +2,14 @@ from pathlib import Path
 import argparse
 import json
 import re
+import sys
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # 1. 문서(Chunk) 로드
 # 2. Token으로 분리
@@ -15,7 +20,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # 7. 가장 높은 점수의 Top-k 문서 반환
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
+CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "wikipedia_chunks.jsonl"
 
 
 def tokenize(text: str) -> list[str]:
@@ -99,10 +104,9 @@ def main() -> None:
     )
     parser.add_argument("query", nargs="?", help="Search query")
     parser.add_argument("--top-k", type=int, default=5, help="Number of results to show")
-    parser.add_argument("--chunks", type=Path, default=CHUNKS_PATH, help="Path to chunks JSONL")
     args = parser.parse_args()
 
-    chunks = load_chunks(args.chunks)
+    chunks = load_chunks(CHUNKS_PATH)
     vectorizer, matrix = build_tfidf(chunks)
 
     if args.query:

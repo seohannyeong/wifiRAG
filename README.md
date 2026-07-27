@@ -408,3 +408,203 @@ PDF
   -> BM25 / TF-IDF / Dense Retrieval
   -> retriever comparison report
 ```
+
+## Wikipedia KG Pipeline
+
+팀원 코드의 Wikipedia 기반 Knowledge Graph 파트를 이 프로젝트 구조에 맞게 통합했습니다.
+
+전체 흐름은 다음과 같습니다.
+
+```text
+entity_ids.del
+  -> Wikipedia API data collection
+  -> wikipedia_rag_data.jsonl
+  -> KG-GEN
+  -> data/kg/{provider}/*.json
+  -> Neo4j import
+```
+
+### 추가 데이터 위치
+
+| 파일/폴더 | 설명 |
+| --- | --- |
+| `data/entities/entity_ids.del` | Wikipedia entity 목록 |
+| `data/wikipedia/wikipedia_rag_data.jsonl` | Wikipedia API로 수집된 text 데이터 |
+| `data/kg/` | 팀원이 생성한 KG JSON 결과 |
+| `data/kg/openai/` | OpenAI 모델로 생성한 KG 샘플 |
+| `data/kg/gemini/` | Gemini 모델로 생성한 KG 샘플 |
+| `data/kg/deepseek/` | DeepSeek 모델로 생성한 KG 샘플 |
+
+### 환경 변수 설정
+
+KG 생성과 Neo4j import를 실행하려면 `.env` 파일이 필요합니다.
+
+먼저 `.env.example`을 참고해서 프로젝트 루트에 `.env` 파일을 만듭니다.
+
+```text
+OPENAI_API_KEY=your_openai_api_key
+GEMINI_API_KEY=your_gemini_api_key
+DEEPSEEK_API_KEY=your_deepseek_api_key
+
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USER=neo4j
+NEO4J_PASSWORD=your_neo4j_password
+```
+
+실제 API key와 password가 들어가는 `.env`는 Git에 올리면 안 됩니다.
+
+### 패키지 전체 설치
+
+전체 프로젝트 패키지는 `requirements.txt`로 설치할 수 있습니다.
+
+Windows:
+
+```powershell
+pip install -r requirements.txt
+```
+
+Mac:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+### 1. Wikipedia 데이터 수집
+
+기본 1000개 entity를 수집합니다.
+
+Windows:
+
+```powershell
+python .\scripts\collection\collect_wikipedia.py --limit 1000
+```
+
+Mac:
+
+```bash
+python3 scripts/collection/collect_wikipedia.py --limit 1000
+```
+
+출력 파일:
+
+```text
+data/wikipedia/wikipedia_rag_data.jsonl
+```
+
+주의: 기본 실행은 기존 output 파일을 새로 씁니다. 기존 파일 뒤에 이어 쓰고 싶으면 `--append`를 사용합니다.
+
+### 2. Knowledge Graph 생성
+
+KG-GEN을 사용해서 Wikipedia text에서 entity/relation graph를 생성합니다.
+
+기본값은 비용을 줄이기 위해 10개만 생성합니다.
+
+Windows:
+
+```powershell
+python .\scripts\kg\generate_kg.py --provider openai --limit 10
+```
+
+Mac:
+
+```bash
+python3 scripts/kg/generate_kg.py --provider openai --limit 10
+```
+
+provider는 다음 중 하나를 선택할 수 있습니다.
+
+```text
+openai
+gemini
+deepseek
+```
+
+예시:
+
+```bash
+python3 scripts/kg/generate_kg.py --provider gemini --limit 10
+python3 scripts/kg/generate_kg.py --provider deepseek --limit 10
+```
+
+출력 폴더:
+
+```text
+data/kg/openai/
+data/kg/gemini/
+data/kg/deepseek/
+```
+
+기존 KG 파일을 덮어쓰려면 `--overwrite`를 사용합니다.
+
+### 3. Neo4j Import
+
+Neo4j Desktop 또는 Neo4j Server가 설치되어 있고 실행 중이어야 합니다.
+
+OpenAI KG 결과를 Neo4j에 넣는 예시:
+
+Windows:
+
+```powershell
+python .\scripts\kg\import_to_neo4j.py --kg-dir data\kg\openai
+```
+
+Mac:
+
+```bash
+python3 scripts/kg/import_to_neo4j.py --kg-dir data/kg/openai
+```
+
+기존 Neo4j graph를 지우고 새로 넣고 싶으면 `--clear-first`를 사용합니다.
+
+```bash
+python3 scripts/kg/import_to_neo4j.py --kg-dir data/kg/openai --clear-first
+```
+
+주의: `--clear-first`는 Neo4j 안의 기존 node와 relationship을 삭제합니다.
+
+### 4. KG Pipeline 한번에 실행
+
+수집, KG 생성, Neo4j import를 순서대로 실행할 수 있습니다.
+
+Windows:
+
+```powershell
+python .\scripts\kg\run_kg_pipeline.py --limit 10 --provider openai
+```
+
+Mac:
+
+```bash
+python3 scripts/kg/run_kg_pipeline.py --limit 10 --provider openai
+```
+
+이미 수집된 `wikipedia_rag_data.jsonl`을 사용하고 싶으면 collection을 건너뜁니다.
+
+```bash
+python3 scripts/kg/run_kg_pipeline.py --skip-collection --limit 10 --provider openai
+```
+
+Neo4j import까지는 하지 않고 KG JSON만 만들고 싶으면:
+
+```bash
+python3 scripts/kg/run_kg_pipeline.py --skip-collection --skip-neo4j --limit 10 --provider openai
+```
+
+## 통합 후 전체 구조
+
+이 프로젝트는 이제 두 종류의 knowledge source를 다룹니다.
+
+```text
+1. PDF 기반 실험 데이터
+   survey on RAG2.pdf
+   -> chunking
+   -> BM25 / TF-IDF / Dense retrieval
+
+2. Wikipedia 기반 최종 데이터
+   entity_ids.del
+   -> Wikipedia API
+   -> KG-GEN
+   -> Neo4j
+```
+
+PDF 논문은 RAG pipeline을 먼저 검증하기 위한 prototype 데이터이고, Wikipedia 데이터는 최종 Wikipedia 기반 RAG 시스템의 main knowledge source입니다.

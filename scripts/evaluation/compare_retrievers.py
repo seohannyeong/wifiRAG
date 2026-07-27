@@ -6,7 +6,7 @@ import sys
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RETRIEVAL_DIR = PROJECT_ROOT / "scripts" / "retrieval"
-CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
+CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "wikipedia_chunks.jsonl"
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "retriever_comparison.json"
 REPORT_PATH = PROJECT_ROOT / "data" / "processed" / "retriever_comparison.md"
 

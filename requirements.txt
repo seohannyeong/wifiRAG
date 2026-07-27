@@ -1,0 +1,11 @@
+pypdf
+pdfplumber
+pdfreader
+rank_bm25
+scikit-learn
+wikipedia-api
+pandas
+kg-gen
+neo4j
+python-dotenv
+

@@ -2,12 +2,18 @@ from pathlib import Path
 import argparse
 import json
 import re
+import sys
 
 from rank_bm25 import BM25Okapi
 
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
+CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "wikipedia_chunks.jsonl"
+
 
 #bm25 동작 과정
 # 1. JSONL에서 chunk 로드
@@ -90,10 +96,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Search RAG survey chunks with BM25.")
     parser.add_argument("query", nargs="?", help="Search query")
     parser.add_argument("--top-k", type=int, default=5, help="Number of results to show")
-    parser.add_argument("--chunks", type=Path, default=CHUNKS_PATH, help="Path to chunks JSONL")
     args = parser.parse_args()
 
-    chunks = load_chunks(args.chunks)
+    chunks = load_chunks(CHUNKS_PATH)
     bm25 = build_bm25(chunks)
 
     if args.query:

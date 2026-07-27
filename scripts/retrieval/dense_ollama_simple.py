@@ -8,7 +8,7 @@ import urllib.request
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
+CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "wikipedia_chunks.jsonl"
 
 DEFAULT_OLLAMA_URL = "http://127.0.0.1:11434"
 DEFAULT_MODEL = "nomic-embed-text"
@@ -166,14 +166,13 @@ def main() -> None:
     )
     parser.add_argument("query", nargs="?", help="Search query")
     parser.add_argument("--top-k", type=int, default=5, help="Number of results to show")
-    parser.add_argument("--chunks", type=Path, default=CHUNKS_PATH, help="Path to chunks JSONL")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Ollama embedding model")
     parser.add_argument("--ollama-url", default=DEFAULT_OLLAMA_URL, help="Ollama base URL")
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT, help="Ollama request timeout in seconds")
     args = parser.parse_args()
 
     check_ollama(args.ollama_url, args.timeout)
-    chunks = load_chunks(args.chunks)
+    chunks = load_chunks(CHUNKS_PATH)
     chunk_embeddings = build_embeddings(
         chunks=chunks,
         model=args.model,

@@ -3,8 +3,12 @@ import argparse
 import json
 import math
 import socket
+import sys
 import urllib.error
 import urllib.request
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # Ollama embedding model로 vector 변환
 # embedding  저장
@@ -13,8 +17,9 @@ import urllib.request
 # top-k chunk 반환
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_chunks.jsonl"
-EMBEDDINGS_PATH = PROJECT_ROOT / "data" / "processed" / "survey_on_rag2_ollama_embeddings.json"
+CHUNKS_PATH = PROJECT_ROOT / "data" / "processed" / "wikipedia_chunks.jsonl"
+
+EMBEDDINGS_PATH = PROJECT_ROOT / "data" / "processed" / "wikipedia_ollama_embeddings.json"
 
 DEFAULT_OLLAMA_URL = "http://127.0.0.1:11434" # 로컬 Ollama 서버 주소
 DEFAULT_MODEL = "nomic-embed-text"
@@ -206,7 +211,6 @@ def main() -> None:
     )
     parser.add_argument("query", nargs="?", help="Search query")
     parser.add_argument("--top-k", type=int, default=5, help="Number of results to show")
-    parser.add_argument("--chunks", type=Path, default=CHUNKS_PATH, help="Path to chunks JSONL")
     parser.add_argument("--cache", type=Path, default=EMBEDDINGS_PATH, help="Embedding cache path")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Ollama embedding model")
     parser.add_argument("--ollama-url", default=DEFAULT_OLLAMA_URL, help="Ollama base URL")
@@ -215,7 +219,7 @@ def main() -> None:
     args = parser.parse_args()
 
     check_ollama(args.ollama_url, args.timeout)
-    chunks = load_chunks(args.chunks)
+    chunks = load_chunks(CHUNKS_PATH)
     embeddings = build_or_load_embeddings(
         chunks=chunks,
         model=args.model,
