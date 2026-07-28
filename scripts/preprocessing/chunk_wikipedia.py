@@ -92,7 +92,7 @@ def chunk_wikipedia(
 
             record = json.loads(line)
             entity = record.get("entity", f"entity_{line_number}")
-            if not allow_duplicates and entity in seen_entities:
+            if not allow_duplicates and entity in seen_entities: #중복 제거 
                 skipped_duplicates += 1
                 continue
             seen_entities.add(entity)

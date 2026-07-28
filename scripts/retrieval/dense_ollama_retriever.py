@@ -108,6 +108,25 @@ def cosine_similarity(left: list[float], right: list[float]) -> float:
         return 0.0
     return dot / (left_norm * right_norm)
 
+def euclidean_distance(left: list[float], right: list[float]) -> float:
+    return math.sqrt(sum((a - b) ** 2 for a, b in zip(left, right)))
+
+def euclidean_similarity(left: list[float], right: list[float]) -> float:
+    distance = euclidean_distance(left, right)
+    return 1 / (1 + distance)  # Convert distance to similarity score
+
+
+def embedding_similarity(
+    query_embedding: list[float],
+    chunk_embedding: list[float],
+    metric: str,
+) -> float:
+    if metric == "cosine":
+        return cosine_similarity(query_embedding, chunk_embedding)
+    if metric == "euclidean":
+        return euclidean_similarity(query_embedding, chunk_embedding)
+    raise ValueError(f"Unknown metric: {metric}")
+
 # 캐시된 임베딩이 현재 모델과 일치하는지 확인하는 함수
 def cache_matches(cache: dict, chunks: list[dict], model: str) -> bool:
     if cache.get("model") != model:
@@ -162,10 +181,11 @@ def search(
     ollama_url: str,
     timeout: int,
     top_k: int,
+    metric: str = "cosine",
 ) -> list[dict]:
     query_embedding = embed_text(query, model, ollama_url, timeout)
     scores = [
-        cosine_similarity(query_embedding, item["embedding"])
+        embedding_similarity(query_embedding, item["embedding"], metric)
         for item in embeddings
     ]
     ranked_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)
@@ -216,6 +236,12 @@ def main() -> None:
     parser.add_argument("--ollama-url", default=DEFAULT_OLLAMA_URL, help="Ollama base URL")
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT, help="Ollama request timeout in seconds")
     parser.add_argument("--rebuild-cache", action="store_true", help="Recompute all embeddings")
+    parser.add_argument(
+        "--metric",
+        choices=["cosine", "euclidean"],
+        default="cosine",
+        help="Similarity metric for dense retrieval",
+    )
     args = parser.parse_args()
 
     check_ollama(args.ollama_url, args.timeout)
@@ -238,6 +264,7 @@ def main() -> None:
             args.ollama_url,
             args.timeout,
             args.top_k,
+            args.metric,
         )
         print_results(args.query, results)
         return
@@ -258,6 +285,7 @@ def main() -> None:
             args.ollama_url,
             args.timeout,
             args.top_k,
+            args.metric,
         )
         print_results(query, results)
 

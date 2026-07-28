@@ -21,32 +21,55 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
+# DEFAULT_QUERIES = [
+#     "BM25 sparse retrieval", #명확한 keyword query에서 세 retriever 비교
+#     "dense retrieval embedding",
+#     "retrieval granularity chunk entity",
+#     "query rewriting",
+#     "Self-RAG", 
+#     "How does RAG reduce hallucination?",
+#     "What are training-free RAG methods?",
+#     "What is the difference between sparse retrieval and dense retrieval?",
+#     "What is retrieval granularity in RAG?",
+#     "What are pre-retrieval and post-retrieval techniques?",
+#     "How is Wikipedia used as an external database in RAG?",
+#     "What is input-layer integration?", #가까운 section에 있는 query와 관련된 chunk를 top-k로 반환하는지 비교
+#     "What is output-layer integration?",
+#     "What is intermediate-layer integration?",
+#     "What are independent training, sequential training, and joint training?", # 
+#     "What are the future challenges of RA-LLMs?",
+#     "Why can irrelevant retrieved passages hurt generation?",
+#     "What applications use retrieval-augmented large language models?",
+#     "How can the model use outside knowledge to avoid wrong answers?",
+#     "How does the system decide whether to retrieve more information?",
+#     "What methods modify the user question before searching?",
+#     "How can external documents make generated answers more reliable?",
+#     "What happens when retrieved information is noisy or unrelated?",
+#     "How can a model answer questions about information not seen during training?",
+#     "How can retrieved passages be shortened before being given to the generator?",
+# ]
 DEFAULT_QUERIES = [
-    "BM25 sparse retrieval", #명확한 keyword query에서 세 retriever 비교
-    "dense retrieval embedding",
-    "retrieval granularity chunk entity",
-    "query rewriting",
-    "Self-RAG", 
-    "How does RAG reduce hallucination?",
-    "What are training-free RAG methods?",
-    "What is the difference between sparse retrieval and dense retrieval?",
-    "What is retrieval granularity in RAG?",
-    "What are pre-retrieval and post-retrieval techniques?",
-    "How is Wikipedia used as an external database in RAG?",
-    "What is input-layer integration?", #가까운 section에 있는 query와 관련된 chunk를 top-k로 반환하는지 비교
-    "What is output-layer integration?",
-    "What is intermediate-layer integration?",
-    "What are independent training, sequential training, and joint training?", # 
-    "What are the future challenges of RA-LLMs?",
-    "Why can irrelevant retrieved passages hurt generation?",
-    "What applications use retrieval-augmented large language models?",
-    "How can the model use outside knowledge to avoid wrong answers?",
-    "How does the system decide whether to retrieve more information?",
-    "What methods modify the user question before searching?",
-    "How can external documents make generated answers more reliable?",
-    "What happens when retrieved information is noisy or unrelated?",
-    "How can a model answer questions about information not seen during training?",
-    "How can retrieved passages be shortened before being given to the generator?",
+    "Which French town near western Paris was associated with Impressionist painters?",
+    "Which riverside suburb was described by Renoir as a pretty spot near Paris?",
+    "Where did painters gather around Maison Fournaise and the Seine?",
+    "Which place opened a museum dedicated to Sufism in 2024?",
+    "Which South Korean football club played in the K3 League?",
+    "Find the article about a semi-professional football team from Gyeonggi Province.",
+    "Which club name is connected to Yangju and Korean football?",
+    "Which European republic has overseas regions in South America and the Caribbean?",
+    "Which country borders Belgium, Germany, Switzerland, Italy, Monaco, Andorra, and Spain?",
+    "Which nation has Paris as its largest city and cultural center?",
+    "Find the article about the country whose history includes Gauls, Franks, and Napoleon.",
+    "Which Renaissance artist was known as a German painter and printmaker?",
+    "Who created works during the Northern Renaissance and was linked to Nuremberg?",
+    "Find the article about an artist known for engravings and self-portraits.",
+    "Which Finnish football team is commonly abbreviated as HJK?",
+    "Find the Helsinki football club article without using its full Finnish name.",
+    "Which sports club is described as a major Finnish football club from Helsinki?",
+    "Which Bavarian city is associated with imperial history and Renaissance art?",
+    "Find the German city connected to Franconia and medieval history.",
+    "Which city in Germany is linked to Albrecht Durer?",
+    "Find the article about a European city in Bavaria without naming the city directly.",
 ]
 
 
@@ -88,6 +111,7 @@ def build_dense_runner(
     ollama_url: str,
     timeout: int,
     rebuild_cache: bool,
+    metric: str = "cosine",
 ):
     dense_ollama_retriever.check_ollama(ollama_url, timeout)
     embeddings = dense_ollama_retriever.build_or_load_embeddings(
@@ -108,6 +132,7 @@ def build_dense_runner(
             ollama_url=ollama_url,
             timeout=timeout,
             top_k=top_k,
+            metric=metric,
         )
 
     return run
@@ -213,7 +238,7 @@ def main() -> None:
         "--methods",
         nargs="+",
         default=["bm25", "tfidf", "dense"],
-        choices=["bm25", "tfidf", "dense"],
+        choices=["bm25", "tfidf", "dense", "dense_euclidean"],
         help="Retrievers to compare",
     )
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH, help="JSON output path")
@@ -245,6 +270,16 @@ def main() -> None:
             ollama_url=args.ollama_url,
             timeout=args.timeout,
             rebuild_cache=args.rebuild_dense_cache,
+            metric="cosine",
+        )
+    if "dense_euclidean" in args.methods:
+        runners["dense_euclidean"] = build_dense_runner(
+            chunks=chunks,
+            model=args.model,
+            ollama_url=args.ollama_url,
+            timeout=args.timeout,
+            rebuild_cache=args.rebuild_dense_cache,
+            metric="euclidean",
         )
 
     comparison = []

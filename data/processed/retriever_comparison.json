@@ -1,1325 +1,1071 @@
 [
   {
-    "query": "BM25 sparse retrieval",
+    "query": "Where is Chatou located?",
     "results": {
-      "bm25": [
-        {
-          "score": 10.253596347237933,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        },
-        {
-          "score": 7.752742099775924,
-          "chunk_id": "survey_on_rag2_p11_c1",
-          "page": 11,
-          "chunk_index": 1,
-          "preview": "given input. Regarding the retriever, it can be categorized into two types: 1) Sparse retriever [120, 125], and 2) Dense retriever [61, 69, 197]. The sparse ret..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.32058153060922906,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        },
-        {
-          "score": 0.18908824025767312,
-          "chunk_id": "survey_on_rag2_p11_c1",
-          "page": 11,
-          "chunk_index": 1,
-          "preview": "given input. Regarding the retriever, it can be categorized into two types: 1) Sparse retriever [120, 125], and 2) Dense retriever [61, 69, 197]. The sparse ret..."
-        }
-      ],
       "dense": [
         {
-          "score": 0.6839639007663937,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        },
-        {
-          "score": 0.672501318227862,
-          "chunk_id": "survey_on_rag2_p4_c3",
-          "page": 4,
-          "chunk_index": 3,
-          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "dense retrieval embedding",
-    "results": {
-      "bm25": [
-        {
-          "score": 8.465761314132338,
-          "chunk_id": "survey_on_rag2_p4_c4",
-          "page": 4,
-          "chunk_index": 4,
-          "preview": "and docu- ments into continuous vector space with certain criteria, for exam- ple, semantic similarity [61]. Dense retrieval methods are usually trainable, ther..."
-        },
-        {
-          "score": 7.9204913117508795,
-          "chunk_id": "survey_on_rag2_p5_c1",
-          "page": 5,
-          "chunk_index": 1,
-          "preview": "first symptom sign of a heart attack is sudden cardiac arrest. Angina pectoris is caused by a decrease in myocardial blood flow.  Figure 3: Illustration of the..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.2263599214977896,
-          "chunk_id": "survey_on_rag2_p4_c4",
-          "page": 4,
-          "chunk_index": 4,
-          "preview": "and docu- ments into continuous vector space with certain criteria, for exam- ple, semantic similarity [61]. Dense retrieval methods are usually trainable, ther..."
-        },
-        {
-          "score": 0.1902150298174814,
-          "chunk_id": "survey_on_rag2_p5_c1",
-          "page": 5,
-          "chunk_index": 1,
-          "preview": "first symptom sign of a heart attack is sudden cardiac arrest. Angina pectoris is caused by a decrease in myocardial blood flow.  Figure 3: Illustration of the..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.7364318962825841,
-          "chunk_id": "survey_on_rag2_p4_c4",
-          "page": 4,
-          "chunk_index": 4,
-          "preview": "and docu- ments into continuous vector space with certain criteria, for exam- ple, semantic similarity [61]. Dense retrieval methods are usually trainable, ther..."
-        },
-        {
-          "score": 0.684951889115503,
-          "chunk_id": "survey_on_rag2_p4_c3",
-          "page": 4,
-          "chunk_index": 3,
-          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "retrieval granularity chunk entity",
-    "results": {
-      "bm25": [
-        {
-          "score": 16.017889138861847,
-          "chunk_id": "survey_on_rag2_p5_c3",
-          "page": 5,
-          "chunk_index": 3,
-          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden..."
-        },
-        {
-          "score": 12.18898250608884,
-          "chunk_id": "survey_on_rag2_p4_c8",
-          "page": 4,
-          "chunk_index": 8,
-          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or oth..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.3865281304679261,
-          "chunk_id": "survey_on_rag2_p5_c3",
-          "page": 5,
-          "chunk_index": 3,
-          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden..."
-        },
-        {
-          "score": 0.36038530211459563,
-          "chunk_id": "survey_on_rag2_p4_c8",
-          "page": 4,
-          "chunk_index": 8,
-          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or oth..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.8137480755036853,
-          "chunk_id": "survey_on_rag2_p4_c8",
-          "page": 4,
-          "chunk_index": 8,
-          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or oth..."
-        },
-        {
-          "score": 0.7015456211230008,
-          "chunk_id": "survey_on_rag2_p5_c3",
-          "page": 5,
-          "chunk_index": 3,
-          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "query rewriting",
-    "results": {
-      "bm25": [
-        {
-          "score": 7.682093859935341,
-          "chunk_id": "survey_on_rag2_p6_c1",
-          "page": 6,
-          "chunk_index": 1,
-          "preview": "of the rewriting step is to clarify the retrieval need in the new query to ease the burden on the retrieval function to comprehend the input and enhance the out..."
-        },
-        {
-          "score": 5.895667901358188,
-          "chunk_id": "survey_on_rag2_p6_c0",
-          "page": 6,
+          "score": 0.8170097247425286,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
           "chunk_index": 0,
-          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li on ad-hoc inf..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.30902749050035416,
-          "chunk_id": "survey_on_rag2_p6_c1",
-          "page": 6,
-          "chunk_index": 1,
-          "preview": "of the rewriting step is to clarify the retrieval need in the new query to ease the burden on the retrieval function to comprehend the input and enhance the out..."
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
         },
         {
-          "score": 0.1809080671073343,
-          "chunk_id": "survey_on_rag2_p6_c0",
-          "page": 6,
-          "chunk_index": 0,
-          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li on ad-hoc inf..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.7194611139386444,
-          "chunk_id": "survey_on_rag2_p6_c1",
-          "page": 6,
-          "chunk_index": 1,
-          "preview": "of the rewriting step is to clarify the retrieval need in the new query to ease the burden on the retrieval function to comprehend the input and enhance the out..."
+          "score": 0.7052229009326154,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
         },
         {
-          "score": 0.591672299336281,
-          "chunk_id": "survey_on_rag2_p6_c0",
-          "page": 6,
+          "score": 0.6809850462475938,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6230672008768742,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
           "chunk_index": 0,
-          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li on ad-hoc inf..."
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
+        },
+        {
+          "score": 0.565666982328532,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
+        },
+        {
+          "score": 0.5559360912038143,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
         }
       ]
     }
   },
   {
-    "query": "Self-RAG",
+    "query": "Chatou commune Yvelines France",
     "results": {
-      "bm25": [
-        {
-          "score": 3.8745389877248657,
-          "chunk_id": "survey_on_rag2_p12_c4",
-          "page": 12,
-          "chunk_index": 4,
-          "preview": "nature of knowledge in the world, another model [152] further accesses large amounts of dynamic information in search engines to generate responses. 5.1.3 Fact..."
-        },
-        {
-          "score": 2.7607023638196138,
-          "chunk_id": "survey_on_rag2_p14_c4",
-          "page": 14,
-          "chunk_index": 4,
-          "preview": "Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi. 2023. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. In The Twelft..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.13683408797133273,
-          "chunk_id": "survey_on_rag2_p12_c4",
-          "page": 12,
-          "chunk_index": 4,
-          "preview": "nature of knowledge in the world, another model [152] further accesses large amounts of dynamic information in search engines to generate responses. 5.1.3 Fact..."
-        },
-        {
-          "score": 0.08170674117270077,
-          "chunk_id": "survey_on_rag2_p9_c1",
-          "page": 9,
-          "chunk_index": 1,
-          "preview": "re- trieved passages than on the relevant ones. Therefore, it is critical for RA-LLMs to accurately recall the prior knowledge while selec- tively incorporating..."
-        }
-      ],
       "dense": [
         {
-          "score": 0.5544534043065056,
-          "chunk_id": "survey_on_rag2_p14_c4",
-          "page": 14,
-          "chunk_index": 4,
-          "preview": "Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi. 2023. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. In The Twelft..."
+          "score": 0.8039382030536778,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
         },
         {
-          "score": 0.5179968327092377,
-          "chunk_id": "survey_on_rag2_p3_c0",
+          "score": 0.6883624169850571,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
+        },
+        {
+          "score": 0.6642654563762679,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6149313816634443,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
+        },
+        {
+          "score": 0.5588221972012207,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
+        },
+        {
+          "score": 0.5496220069194933,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Which river is Chatou located near?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.7848146311655583,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
+        },
+        {
+          "score": 0.6847124359410763,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
+        },
+        {
+          "score": 0.6690090220914505,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6038550995922445,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
+        },
+        {
+          "score": 0.5573863392874083,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
+        },
+        {
+          "score": 0.5513825794510024,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What place in Chatou was connected to Impressionist painters?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.843765633059251,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
+        },
+        {
+          "score": 0.7547161945429756,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
+        },
+        {
+          "score": 0.7543151855468616,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6414413200245688,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Île des Impressionnistes, formerly a meeting place for Impressionist painters on the Seine. It was a p..."
+        },
+        {
+          "score": 0.5880950334105987,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the Nazis shot 27 people, civilians and members of the French Resistance. This event is today known as th..."
+        },
+        {
+          "score": 0.58789722686574,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affluent suburbs of western Paris and is on the northwest side of the Seine river about 14 km (9 mi) fro..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What is Yangju Citizen Football Club?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.8970844675436014,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
           "page": 3,
           "chunk_index": 0,
-          "preview": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models Conference’17, July 2017, Washington, DC, USA 2019 2020 2021 2022 2023 2024 RAG..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "How does RAG reduce hallucination?",
-    "results": {
-      "bm25": [
-        {
-          "score": 4.794649015368961,
-          "chunk_id": "survey_on_rag2_p2_c2",
-          "page": 2,
-          "chunk_index": 2,
-          "preview": "multi-modal fashion report generation [27]. LLMs also achieve promising performance in recommender systems by understanding users’ preferences to- wards items [..."
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of Uijeongbu not far from Seoul. The club is a member of the K3 League, the third tier of league footba..."
         },
         {
-          "score": 4.778641770954452,
-          "chunk_id": "survey_on_rag2_p16_c2",
-          "page": 16,
-          "chunk_index": 2,
-          "preview": "(1). Association for Computational Linguistics, 4582–4597. [84] Zonglin Li, Ruiqi Guo, and Sanjiv Kumar. 2022. Decoupled context processing for context augmente..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.07893632497110674,
-          "chunk_id": "survey_on_rag2_p2_c2",
-          "page": 2,
-          "chunk_index": 2,
-          "preview": "multi-modal fashion report generation [27]. LLMs also achieve promising performance in recommender systems by understanding users’ preferences to- wards items [..."
-        },
-        {
-          "score": 0.07659020348702525,
-          "chunk_id": "survey_on_rag2_p2_c3",
-          "page": 2,
-          "chunk_index": 3,
-          "preview": "due to the substantial computational resources required for fine-tuning LLMs with domain-specific or the latest data. This, in turn, significantly hinders the w..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.5948847812629068,
-          "chunk_id": "survey_on_rag2_p14_c1",
-          "page": 14,
-          "chunk_index": 1,
-          "preview": "By enhancing the quality of the external knowledge and tailing robust mechanisms by filtering out low-quality or unreliable information, the RA-LLM systems migh..."
-        },
-        {
-          "score": 0.5943348170712773,
-          "chunk_id": "survey_on_rag2_p2_c3",
-          "page": 2,
-          "chunk_index": 3,
-          "preview": "due to the substantial computational resources required for fine-tuning LLMs with domain-specific or the latest data. This, in turn, significantly hinders the w..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What are training-free RAG methods?",
-    "results": {
-      "bm25": [
-        {
-          "score": 7.3679319890724155,
-          "chunk_id": "survey_on_rag2_p10_c1",
-          "page": 10,
-          "chunk_index": 1,
-          "preview": "Existing RA- LLMs approaches can be categorized into two classes: training-free approaches usually directly leverage retrieved information during the inference..."
-        },
-        {
-          "score": 6.809994997258245,
-          "chunk_id": "survey_on_rag2_p9_c7",
-          "page": 9,
-          "chunk_index": 7,
-          "preview": "train retriever and generator simultaneously. In the following section, we will comprehensively review the training-free, independent training, sequential train..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.18543869674115482,
-          "chunk_id": "survey_on_rag2_p9_c7",
-          "page": 9,
-          "chunk_index": 7,
-          "preview": "train retriever and generator simultaneously. In the following section, we will comprehensively review the training-free, independent training, sequential train..."
-        },
-        {
-          "score": 0.15467156335362953,
-          "chunk_id": "survey_on_rag2_p10_c1",
-          "page": 10,
-          "chunk_index": 1,
-          "preview": "Existing RA- LLMs approaches can be categorized into two classes: training-free approaches usually directly leverage retrieved information during the inference..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.683085673881128,
-          "chunk_id": "survey_on_rag2_p9_c5",
-          "page": 9,
-          "chunk_index": 5,
-          "preview": "strat- egy, which retrieves information for the prediction of every token during the generation. Overall, applying different frequencies of re- trieval can impa..."
-        },
-        {
-          "score": 0.6656349601465138,
-          "chunk_id": "survey_on_rag2_p10_c1",
-          "page": 10,
-          "chunk_index": 1,
-          "preview": "Existing RA- LLMs approaches can be categorized into two classes: training-free approaches usually directly leverage retrieved information during the inference..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What is the difference between sparse retrieval and dense retrieval?",
-    "results": {
-      "bm25": [
-        {
-          "score": 15.332855513779945,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        },
-        {
-          "score": 14.622531237577807,
-          "chunk_id": "survey_on_rag2_p4_c3",
-          "page": 4,
-          "chunk_index": 3,
-          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.27614253425326424,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        },
-        {
-          "score": 0.24259055121852138,
-          "chunk_id": "survey_on_rag2_p4_c3",
-          "page": 4,
-          "chunk_index": 3,
-          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.7295532360252284,
-          "chunk_id": "survey_on_rag2_p4_c3",
-          "page": 4,
-          "chunk_index": 3,
-          "preview": "117, 168, 196, 197], where passages are specifically represented as a bag of words and ranked based on term and inverse docu- ment frequencies [ 54]. On top of..."
-        },
-        {
-          "score": 0.7229137040190515,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What is retrieval granularity in RAG?",
-    "results": {
-      "bm25": [
-        {
-          "score": 10.884172535716147,
-          "chunk_id": "survey_on_rag2_p4_c8",
-          "page": 4,
-          "chunk_index": 8,
-          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or oth..."
-        },
-        {
-          "score": 10.571739844413033,
-          "chunk_id": "survey_on_rag2_p5_c3",
+          "score": 0.6473681355890044,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
           "page": 5,
-          "chunk_index": 3,
-          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.3599074217450201,
-          "chunk_id": "survey_on_rag2_p4_c8",
-          "page": 4,
-          "chunk_index": 8,
-          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or oth..."
-        },
-        {
-          "score": 0.28063308795136876,
-          "chunk_id": "survey_on_rag2_p5_c3",
-          "page": 5,
-          "chunk_index": 3,
-          "preview": "REALM [46], RAG [74] and Atlas [55]. A more fine-grained retrieval, i.e., token retrieval, instead can be done with faster searching but will bring more burden..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.8828694913816014,
-          "chunk_id": "survey_on_rag2_p4_c8",
-          "page": 4,
-          "chunk_index": 8,
-          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or oth..."
-        },
-        {
-          "score": 0.7569289583828261,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What are pre-retrieval and post-retrieval techniques?",
-    "results": {
-      "bm25": [
-        {
-          "score": 9.159064663461988,
-          "chunk_id": "survey_on_rag2_p4_c1",
-          "page": 4,
-          "chunk_index": 1,
-          "preview": "consists of several major processes: retrieval, generation, and augmentation, as well as the mechanism to determine whether the retrieval is needed. In this sec..."
-        },
-        {
-          "score": 8.743011490576965,
-          "chunk_id": "survey_on_rag2_p5_c4",
-          "page": 5,
-          "chunk_index": 4,
-          "preview": "(E AE) model, which divides the parameter space of language models according to the entity identity. The proposed EAE model aims to learn entity representations..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.12634388820977302,
-          "chunk_id": "survey_on_rag2_p5_c4",
-          "page": 5,
-          "chunk_index": 4,
-          "preview": "(E AE) model, which divides the parameter space of language models according to the entity identity. The proposed EAE model aims to learn entity representations..."
-        },
-        {
-          "score": 0.12519485145435516,
-          "chunk_id": "survey_on_rag2_p4_c1",
-          "page": 4,
-          "chunk_index": 1,
-          "preview": "consists of several major processes: retrieval, generation, and augmentation, as well as the mechanism to determine whether the retrieval is needed. In this sec..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.7239518555701026,
-          "chunk_id": "survey_on_rag2_p4_c1",
-          "page": 4,
-          "chunk_index": 1,
-          "preview": "consists of several major processes: retrieval, generation, and augmentation, as well as the mechanism to determine whether the retrieval is needed. In this sec..."
-        },
-        {
-          "score": 0.7048045723165915,
-          "chunk_id": "survey_on_rag2_p4_c2",
-          "page": 4,
-          "chunk_index": 2,
-          "preview": "we will introduce the major techniques involved in the retrieval of tradi- tional and LLM-based RAGs, including the retriever type, retrieval granularity, pre-..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "How is Wikipedia used as an external database in RAG?",
-    "results": {
-      "bm25": [
-        {
-          "score": 11.812819701092913,
-          "chunk_id": "survey_on_rag2_p6_c7",
-          "page": 6,
-          "chunk_index": 7,
-          "preview": "stores key-value pairs for knowledge, which can be constructed in various ways. The keys are primarily used for similarity matching, being as sparse vectors suc..."
-        },
-        {
-          "score": 11.457481879257173,
-          "chunk_id": "survey_on_rag2_p14_c0",
-          "page": 14,
           "chunk_index": 0,
-          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li Quality of Ex..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.21848487907954955,
-          "chunk_id": "survey_on_rag2_p6_c7",
-          "page": 6,
-          "chunk_index": 7,
-          "preview": "stores key-value pairs for knowledge, which can be constructed in various ways. The keys are primarily used for similarity matching, being as sparse vectors suc..."
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
         },
         {
-          "score": 0.21718304565062888,
-          "chunk_id": "survey_on_rag2_p14_c0",
-          "page": 14,
+          "score": 0.6199235897043003,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6879064140559245,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
           "chunk_index": 0,
-          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li Quality of Ex..."
-        }
-      ],
-      "dense": [
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of Uijeongbu not far from Seoul. The club is a member of the K3 League, the third tier of league footba..."
+        },
         {
-          "score": 0.6891514549065542,
-          "chunk_id": "survey_on_rag2_p14_c0",
-          "page": 14,
+          "score": 0.5435373979946648,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
           "chunk_index": 0,
-          "preview": "Conference’17, July 2017, Washington, DC, USA Wenqi Fan, Yujuan Ding, Liangbo Ning, Shijie Wang, Hengyun Li, Dawei Yin, Tat-Seng Chua, and Qing Li Quality of Ex..."
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
         },
         {
-          "score": 0.6758647596261663,
-          "chunk_id": "survey_on_rag2_p1_c5",
-          "page": 1,
-          "chunk_index": 5,
-          "preview": "query or the generated output [62, 103]. Specifically, RAG first invokes the retriever to search and extract the relevant documents from external databases, whi..."
+          "score": 0.5342258803285376,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
         }
       ]
     }
   },
   {
-    "query": "What is input-layer integration?",
+    "query": "Yangju Citizen football club K3 League",
     "results": {
-      "bm25": [
-        {
-          "score": 9.264299362784406,
-          "chunk_id": "survey_on_rag2_p8_c2",
-          "page": 8,
-          "chunk_index": 2,
-          "preview": "which can reduce the computational costs and also relieve the burden of LMs to identify relevant information in long retrieved documents. 3.3 Retrieval Integrat..."
-        },
-        {
-          "score": 8.503595972681277,
-          "chunk_id": "survey_on_rag2_p8_c4",
-          "page": 8,
-          "chunk_index": 4,
-          "preview": "at a time. In general, most black-box generation-based RAG methods apply input-layer integration since neither the intermediate layer of the generation model or..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.3002623356090681,
-          "chunk_id": "survey_on_rag2_p8_c2",
-          "page": 8,
-          "chunk_index": 2,
-          "preview": "which can reduce the computational costs and also relieve the burden of LMs to identify relevant information in long retrieved documents. 3.3 Retrieval Integrat..."
-        },
-        {
-          "score": 0.24754088577536454,
-          "chunk_id": "survey_on_rag2_p8_c4",
-          "page": 8,
-          "chunk_index": 4,
-          "preview": "at a time. In general, most black-box generation-based RAG methods apply input-layer integration since neither the intermediate layer of the generation model or..."
-        }
-      ],
       "dense": [
         {
-          "score": 0.6490348115392248,
-          "chunk_id": "survey_on_rag2_p8_c5",
-          "page": 8,
-          "chunk_index": 5,
-          "preview": "Output-Layer Integration. Another kind of augmentation is post-hoc, i.e., output-layer integration, which joints retrieval and generation results. For example,..."
+          "score": 0.8674175624039444,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of Uijeongbu not far from Seoul. The club is a member of the K3 League, the third tier of league footba..."
         },
         {
-          "score": 0.6270306196499398,
-          "chunk_id": "survey_on_rag2_p8_c6",
-          "page": 8,
-          "chunk_index": 6,
-          "preview": "integration. REFEED [183] proposes an answer refining mechanism that applies an LLM to evaluate the retrieved information and adjust the initial answer accordin..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What is output-layer integration?",
-    "results": {
-      "bm25": [
-        {
-          "score": 11.575107470210696,
-          "chunk_id": "survey_on_rag2_p8_c5",
-          "page": 8,
-          "chunk_index": 5,
-          "preview": "Output-Layer Integration. Another kind of augmentation is post-hoc, i.e., output-layer integration, which joints retrieval and generation results. For example,..."
+          "score": 0.6249924340937073,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
         },
         {
-          "score": 9.422023291515476,
-          "chunk_id": "survey_on_rag2_p8_c4",
-          "page": 8,
-          "chunk_index": 4,
-          "preview": "at a time. In general, most black-box generation-based RAG methods apply input-layer integration since neither the intermediate layer of the generation model or..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.42866262779008013,
-          "chunk_id": "survey_on_rag2_p8_c5",
-          "page": 8,
-          "chunk_index": 5,
-          "preview": "Output-Layer Integration. Another kind of augmentation is post-hoc, i.e., output-layer integration, which joints retrieval and generation results. For example,..."
-        },
-        {
-          "score": 0.2639493483069932,
-          "chunk_id": "survey_on_rag2_p8_c4",
-          "page": 8,
-          "chunk_index": 4,
-          "preview": "at a time. In general, most black-box generation-based RAG methods apply input-layer integration since neither the intermediate layer of the generation model or..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.6998021400175845,
-          "chunk_id": "survey_on_rag2_p8_c5",
-          "page": 8,
-          "chunk_index": 5,
-          "preview": "Output-Layer Integration. Another kind of augmentation is post-hoc, i.e., output-layer integration, which joints retrieval and generation results. For example,..."
-        },
-        {
-          "score": 0.618965497907671,
-          "chunk_id": "survey_on_rag2_p8_c6",
-          "page": 8,
-          "chunk_index": 6,
-          "preview": "integration. REFEED [183] proposes an answer refining mechanism that applies an LLM to evaluate the retrieved information and adjust the initial answer accordin..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What is intermediate-layer integration?",
-    "results": {
-      "bm25": [
-        {
-          "score": 9.73639475930112,
-          "chunk_id": "survey_on_rag2_p8_c6",
-          "page": 8,
-          "chunk_index": 6,
-          "preview": "integration. REFEED [183] proposes an answer refining mechanism that applies an LLM to evaluate the retrieved information and adjust the initial answer accordin..."
-        },
-        {
-          "score": 9.120632100733433,
-          "chunk_id": "survey_on_rag2_p8_c8",
-          "page": 8,
-          "chunk_index": 8,
-          "preview": "alternative to incorporate a large number of text chunks frequently retrieved, which are challenging to process with input-layer integration due to the input le..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.2712650677922109,
-          "chunk_id": "survey_on_rag2_p8_c6",
-          "page": 8,
-          "chunk_index": 6,
-          "preview": "integration. REFEED [183] proposes an answer refining mechanism that applies an LLM to evaluate the retrieved information and adjust the initial answer accordin..."
-        },
-        {
-          "score": 0.2272524566053813,
-          "chunk_id": "survey_on_rag2_p8_c8",
-          "page": 8,
-          "chunk_index": 8,
-          "preview": "alternative to incorporate a large number of text chunks frequently retrieved, which are challenging to process with input-layer integration due to the input le..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.6374870469478637,
-          "chunk_id": "survey_on_rag2_p8_c6",
-          "page": 8,
-          "chunk_index": 6,
-          "preview": "integration. REFEED [183] proposes an answer refining mechanism that applies an LLM to evaluate the retrieved information and adjust the initial answer accordin..."
-        },
-        {
-          "score": 0.60624938390702,
-          "chunk_id": "survey_on_rag2_p8_c5",
-          "page": 8,
-          "chunk_index": 5,
-          "preview": "Output-Layer Integration. Another kind of augmentation is post-hoc, i.e., output-layer integration, which joints retrieval and generation results. For example,..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What are independent training, sequential training, and joint training?",
-    "results": {
-      "bm25": [
-        {
-          "score": 21.421469324473236,
-          "chunk_id": "survey_on_rag2_p9_c6",
-          "page": 9,
-          "chunk_index": 6,
-          "preview": "However, one potential challenge is that the retriever and generator components are not specifically optimized for downstream tasks, which could easily lead to..."
-        },
-        {
-          "score": 20.213586614347165,
-          "chunk_id": "survey_on_rag2_p10_c1",
-          "page": 10,
+          "score": 0.601417800700345,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c1",
+          "page": 5,
           "chunk_index": 1,
-          "preview": "Existing RA- LLMs approaches can be categorized into two classes: training-free approaches usually directly leverage retrieved information during the inference..."
+          "preview": "of Finland's most successful players have played for HJK before moving abroad. The club has also similar success with women's Kansallinen Liiga. HJK is the only Finnish club that has participated in the UEFA Champions League group stage. In 1998, they beat Metz in the play-off ro..."
         }
       ],
-      "tfidf": [
+      "dense_euclidean": [
         {
-          "score": 0.3570558793838692,
-          "chunk_id": "survey_on_rag2_p9_c6",
-          "page": 9,
-          "chunk_index": 6,
-          "preview": "However, one potential challenge is that the retriever and generator components are not specifically optimized for downstream tasks, which could easily lead to..."
+          "score": 0.6600914249123759,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of Uijeongbu not far from Seoul. The club is a member of the K3 League, the third tier of league footba..."
         },
         {
-          "score": 0.33434976034112057,
-          "chunk_id": "survey_on_rag2_p11_c2",
-          "page": 11,
-          "chunk_index": 2,
-          "preview": "retrieval and reformulate the text generation as multiple copy-and-paste operations from existing source text collection. 4.3 Sequential Training Independent tr..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.7061155541816433,
-          "chunk_id": "survey_on_rag2_p9_c7",
-          "page": 9,
-          "chunk_index": 7,
-          "preview": "train retriever and generator simultaneously. In the following section, we will comprehensively review the training-free, independent training, sequential train..."
+          "score": 0.5358958733251805,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
         },
         {
-          "score": 0.6936761103984039,
-          "chunk_id": "survey_on_rag2_p11_c2",
-          "page": 11,
-          "chunk_index": 2,
-          "preview": "retrieval and reformulate the text generation as multiple copy-and-paste operations from existing source text collection. 4.3 Sequential Training Independent tr..."
+          "score": 0.5283064844777345,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "of Finland's most successful players have played for HJK before moving abroad. The club has also similar success with women's Kansallinen Liiga. HJK is the only Finnish club that has participated in the UEFA Champions League group stage. In 1998, they beat Metz in the play-off ro..."
         }
       ]
     }
   },
   {
-    "query": "What are the future challenges of RA-LLMs?",
+    "query": "Which league does Yangju Citizen FC play in?",
     "results": {
-      "bm25": [
+      "dense": [
         {
-          "score": 16.119641723978813,
-          "chunk_id": "survey_on_rag2_p13_c3",
-          "page": 13,
-          "chunk_index": 3,
-          "preview": "analysis. In addition, financial QA is another primary task of financial analysis, which usually extracts relevant knowledge from financial docu- ments. As prof..."
+          "score": 0.8691613565366139,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of Uijeongbu not far from Seoul. The club is a member of the K3 League, the third tier of league footba..."
         },
         {
-          "score": 12.881214202185355,
-          "chunk_id": "survey_on_rag2_p1_c2",
-          "page": 1,
-          "chunk_index": 2,
-          "preview": "existing research studies in RA-LLMs, covering three pri- mary technical perspectives: architectures, training strategies, and applications. As the preliminary..."
+          "score": 0.6479281038199022,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.6366830225019656,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
         }
       ],
-      "tfidf": [
+      "dense_euclidean": [
         {
-          "score": 0.2780862364538806,
-          "chunk_id": "survey_on_rag2_p13_c3",
-          "page": 13,
-          "chunk_index": 3,
-          "preview": "analysis. In addition, financial QA is another primary task of financial analysis, which usually extracts relevant knowledge from financial docu- ments. As prof..."
+          "score": 0.6615751735174302,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of Uijeongbu not far from Seoul. The club is a member of the K3 League, the third tier of league footba..."
         },
         {
-          "score": 0.17297527443846838,
-          "chunk_id": "survey_on_rag2_p2_c5",
+          "score": 0.543734551679069,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.5398319962873092,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What country is France located in Western Europe?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.7482833483969575,
+          "chunk_id": "wiki_France_c8",
           "page": 2,
-          "chunk_index": 5,
-          "preview": "research from several primary perspectives of RA-LLMs in terms of retrieval, generation, and augmentation in Section 3, as well as the necessity and application..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.738954755750661,
-          "chunk_id": "survey_on_rag2_p1_c2",
-          "page": 1,
-          "chunk_index": 2,
-          "preview": "existing research studies in RA-LLMs, covering three pri- mary technical perspectives: architectures, training strategies, and applications. As the preliminary..."
-        },
-        {
-          "score": 0.7132785254494362,
-          "chunk_id": "survey_on_rag2_p2_c5",
-          "page": 2,
-          "chunk_index": 5,
-          "preview": "research from several primary perspectives of RA-LLMs in terms of retrieval, generation, and augmentation in Section 3, as well as the necessity and application..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "Why can irrelevant retrieved passages hurt generation?",
-    "results": {
-      "bm25": [
-        {
-          "score": 11.044456359056657,
-          "chunk_id": "survey_on_rag2_p9_c0",
-          "page": 9,
-          "chunk_index": 0,
-          "preview": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models Conference’17, July 2017, Washington, DC, USA 3.4 Retrieval Augmentation Necessi..."
-        },
-        {
-          "score": 6.002702137923725,
-          "chunk_id": "survey_on_rag2_p8_c6",
-          "page": 8,
-          "chunk_index": 6,
-          "preview": "integration. REFEED [183] proposes an answer refining mechanism that applies an LLM to evaluate the retrieved information and adjust the initial answer accordin..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.21186322107514294,
-          "chunk_id": "survey_on_rag2_p9_c0",
-          "page": 9,
-          "chunk_index": 0,
-          "preview": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models Conference’17, July 2017, Washington, DC, USA 3.4 Retrieval Augmentation Necessi..."
-        },
-        {
-          "score": 0.11671701504806067,
-          "chunk_id": "survey_on_rag2_p6_c6",
-          "page": 6,
-          "chunk_index": 6,
-          "preview": "which adds an intermediate step to process the retrieved documents into a textual summary before in-context augmentation in the generation process. From another..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.6583584578023204,
-          "chunk_id": "survey_on_rag2_p6_c6",
-          "page": 6,
-          "chunk_index": 6,
-          "preview": "which adds an intermediate step to process the retrieved documents into a textual summary before in-context augmentation in the generation process. From another..."
-        },
-        {
-          "score": 0.6205163851225323,
-          "chunk_id": "survey_on_rag2_p8_c3",
-          "page": 8,
-          "chunk_index": 3,
-          "preview": "the origi- nal input and all retrieved documents into a single sequence as the new input for the generation model. Despite the effectiveness, such integration i..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What applications use retrieval-augmented large language models?",
-    "results": {
-      "bm25": [
-        {
-          "score": 7.757317832335119,
-          "chunk_id": "survey_on_rag2_p11_c7",
-          "page": 11,
-          "chunk_index": 7,
-          "preview": "paradigm to that of RAG [74], and Maximum Inner Product Search (MIPS) [15, 29, 119, 131] technique is used to locate the most relevant documents. To employ MIPS..."
-        },
-        {
-          "score": 6.775174039404767,
-          "chunk_id": "survey_on_rag2_p14_c1",
-          "page": 14,
-          "chunk_index": 1,
-          "preview": "By enhancing the quality of the external knowledge and tailing robust mechanisms by filtering out low-quality or unreliable information, the RA-LLM systems migh..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.1840900061990584,
-          "chunk_id": "survey_on_rag2_p11_c7",
-          "page": 11,
-          "chunk_index": 7,
-          "preview": "paradigm to that of RAG [74], and Maximum Inner Product Search (MIPS) [15, 29, 119, 131] technique is used to locate the most relevant documents. To employ MIPS..."
-        },
-        {
-          "score": 0.158614684851733,
-          "chunk_id": "survey_on_rag2_p12_c1",
-          "page": 12,
-          "chunk_index": 1,
-          "preview": "et al. [178], etc. Figure 6: A summary of applications of RA-LLMs categorized by NLP applications, downstream tasks, and domain-specific application. Specifical..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.7975534387576693,
-          "chunk_id": "survey_on_rag2_p1_c1",
-          "page": 1,
-          "chunk_index": 1,
-          "preview": "external knowl- edge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capac- ity of retrieva..."
-        },
-        {
-          "score": 0.7946021029065972,
-          "chunk_id": "survey_on_rag2_p14_c2",
-          "page": 14,
-          "chunk_index": 2,
-          "preview": "by leveraging retrieval to provide the latest auxiliary information and teaching LLMs to harness the retrieved external knowledge. With the rapid advancements i..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "How can the model use outside knowledge to avoid wrong answers?",
-    "results": {
-      "bm25": [
-        {
-          "score": 10.493808040722092,
-          "chunk_id": "survey_on_rag2_p8_c7",
-          "page": 8,
-          "chunk_index": 7,
-          "preview": "add addi- tional complexity and is promising to enhance the capability of the generation model with effective training. Typically, a Transformer module is intro..."
-        },
-        {
-          "score": 9.32402316889409,
-          "chunk_id": "survey_on_rag2_p7_c2",
-          "page": 7,
-          "chunk_index": 2,
-          "preview": "[22, 39, 46, 62, 74, 117, 135, 168, 180] to trillion token- level [6]. Domain-specific database is also used for downstream tasks. For example, for the code gen..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.1667723300897359,
-          "chunk_id": "survey_on_rag2_p8_c7",
-          "page": 8,
-          "chunk_index": 7,
-          "preview": "add addi- tional complexity and is promising to enhance the capability of the generation model with effective training. Typically, a Transformer module is intro..."
-        },
-        {
-          "score": 0.16351800950422765,
-          "chunk_id": "survey_on_rag2_p10_c3",
-          "page": 10,
-          "chunk_index": 3,
-          "preview": "Instead of retrieving knowledge from a large corpus, GENREAD [182] first prompts a LLM to generate contextual documents based on the query, and then generate an..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.689727517157588,
-          "chunk_id": "survey_on_rag2_p9_c8",
-          "page": 9,
           "chunk_index": 8,
-          "preview": "[54, 57, 63], instead of relying solely on the implicit knowledge encoded in the model’s parameters. These approaches have shown significant performance improve..."
+          "preview": "and the Netherlands through Saint Martin in the Caribbean. Metropolitan France includes various coastal islands, of which the largest is Corsica. Metropolitan France is situated mostly between latitudes 41° and 51° N, and longitudes 6° W and 10° E, on the western edge of Europe,..."
         },
         {
-          "score": 0.637735637766601,
-          "chunk_id": "survey_on_rag2_p10_c3",
-          "page": 10,
-          "chunk_index": 3,
-          "preview": "Instead of retrieving knowledge from a large corpus, GENREAD [182] first prompts a LLM to generate contextual documents based on the query, and then generate an..."
+          "score": 0.7347063114921979,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many island..."
+        },
+        {
+          "score": 0.7328085971721677,
+          "chunk_id": "wiki_France_c7",
+          "page": 2,
+          "chunk_index": 7,
+          "preview": "English.  Section: Geography The vast majority of France's territory and population is situated in Western Europe and is called Metropolitan France. It is bordered by the North Sea in the north, the English Channel in the northwest, the Atlantic Ocean in the west and the Mediterr..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.5849559717628736,
+          "chunk_id": "wiki_France_c8",
+          "page": 2,
+          "chunk_index": 8,
+          "preview": "and the Netherlands through Saint Martin in the Caribbean. Metropolitan France includes various coastal islands, of which the largest is Corsica. Metropolitan France is situated mostly between latitudes 41° and 51° N, and longitudes 6° W and 10° E, on the western edge of Europe,..."
+        },
+        {
+          "score": 0.5785649965369386,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many island..."
+        },
+        {
+          "score": 0.5776958305748077,
+          "chunk_id": "wiki_France_c7",
+          "page": 2,
+          "chunk_index": 7,
+          "preview": "English.  Section: Geography The vast majority of France's territory and population is situated in Western Europe and is called Metropolitan France. It is bordered by the North Sea in the north, the English Channel in the northwest, the Atlantic Ocean in the west and the Mediterr..."
         }
       ]
     }
   },
   {
-    "query": "How does the system decide whether to retrieve more information?",
+    "query": "France French Republic Western Europe",
     "results": {
-      "bm25": [
+      "dense": [
         {
-          "score": 10.812268454595264,
-          "chunk_id": "survey_on_rag2_p2_c4",
+          "score": 0.6933763526018685,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many island..."
+        },
+        {
+          "score": 0.6826844787874428,
+          "chunk_id": "wiki_France_c2",
+          "page": 2,
+          "chunk_index": 2,
+          "preview": "known as the Hundred Years' War. In the 16th century, French culture flourished during the French Renaissance, and a French colonial empire emerged. Internally, France was dominated by the conflict with the House of Habsburg and the French Wars of Religion between Catholics and H..."
+        },
+        {
+          "score": 0.6630474302145303,
+          "chunk_id": "wiki_France_c3",
+          "page": 2,
+          "chunk_index": 3,
+          "preview": "Bourbon Restoration until the founding of the French Second Republic, which was succeeded by the Second French Empire upon Napoleon III's takeover. His empire collapsed during the Franco-Prussian War in 1870. This led to the establishment of the French Third Republic, as well as..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.5608206737794642,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many island..."
+        },
+        {
+          "score": 0.5565954014809102,
+          "chunk_id": "wiki_France_c2",
+          "page": 2,
+          "chunk_index": 2,
+          "preview": "known as the Hundred Years' War. In the 16th century, French culture flourished during the French Renaissance, and a French colonial empire emerged. Internally, France was dominated by the conflict with the House of Habsburg and the French Wars of Religion between Catholics and H..."
+        },
+        {
+          "score": 0.5491737964147481,
+          "chunk_id": "wiki_France_c3",
+          "page": 2,
+          "chunk_index": 3,
+          "preview": "Bourbon Restoration until the founding of the French Second Republic, which was succeeded by the Second French Empire upon Napoleon III's takeover. His empire collapsed during the Franco-Prussian War in 1870. This led to the establishment of the French Third Republic, as well as..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What is the capital and largest city of France?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.7852520165041835,
+          "chunk_id": "wiki_France_c1",
+          "page": 2,
+          "chunk_index": 1,
+          "preview": "of which are overseas—span a combined area of 632,702 km2 (244,288 sq mi), with a total population estimated at over 69.1 million in 2026. Its capital, largest city and main cultural and economic centre is Paris, with a metropolitan population of over 13 million. Metropolitan Fra..."
+        },
+        {
+          "score": 0.7443075807161638,
+          "chunk_id": "wiki_France_c8",
+          "page": 2,
+          "chunk_index": 8,
+          "preview": "and the Netherlands through Saint Martin in the Caribbean. Metropolitan France includes various coastal islands, of which the largest is Corsica. Metropolitan France is situated mostly between latitudes 41° and 51° N, and longitudes 6° W and 10° E, on the western edge of Europe,..."
+        },
+        {
+          "score": 0.697186237803254,
+          "chunk_id": "wiki_France_c4",
           "page": 2,
           "chunk_index": 4,
-          "preview": "in conversational tasks [137, 171]. As illustrated in Figure 1, an LLM-based dialog system will not be able to answer well for out-of-scope queries. With the he..."
-        },
-        {
-          "score": 10.673384565995038,
-          "chunk_id": "survey_on_rag2_p12_c3",
-          "page": 12,
-          "chunk_index": 3,
-          "preview": "indicate that the quality of the answers may rely more on the output of retrieval. 5.1.2 ChatBot. ChatBot is designed to interact with users in a natural and co..."
+          "preview": "Gaulle. Algeria and most French colonies became independent in the 1960s, with the majority retaining close economic and military ties with France. France retains its centuries-long status as a global centre of art, science, cuisine and philosophy. It hosts the fourth-largest num..."
         }
       ],
-      "tfidf": [
+      "dense_euclidean": [
         {
-          "score": 0.1243537355006343,
-          "chunk_id": "survey_on_rag2_p4_c1",
-          "page": 4,
+          "score": 0.6040983705224009,
+          "chunk_id": "wiki_France_c1",
+          "page": 2,
           "chunk_index": 1,
-          "preview": "consists of several major processes: retrieval, generation, and augmentation, as well as the mechanism to determine whether the retrieval is needed. In this sec..."
+          "preview": "of which are overseas—span a combined area of 632,702 km2 (244,288 sq mi), with a total population estimated at over 69.1 million in 2026. Its capital, largest city and main cultural and economic centre is Paris, with a metropolitan population of over 13 million. Metropolitan Fra..."
         },
         {
-          "score": 0.12347941420580023,
-          "chunk_id": "survey_on_rag2_p2_c4",
+          "score": 0.5830523103424102,
+          "chunk_id": "wiki_France_c8",
+          "page": 2,
+          "chunk_index": 8,
+          "preview": "and the Netherlands through Saint Martin in the Caribbean. Metropolitan France includes various coastal islands, of which the largest is Corsica. Metropolitan France is situated mostly between latitudes 41° and 51° N, and longitudes 6° W and 10° E, on the western edge of Europe,..."
+        },
+        {
+          "score": 0.5623598842598919,
+          "chunk_id": "wiki_France_c4",
           "page": 2,
           "chunk_index": 4,
-          "preview": "in conversational tasks [137, 171]. As illustrated in Figure 1, an LLM-based dialog system will not be able to answer well for out-of-scope queries. With the he..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.5963162211001197,
-          "chunk_id": "survey_on_rag2_p4_c1",
-          "page": 4,
-          "chunk_index": 1,
-          "preview": "consists of several major processes: retrieval, generation, and augmentation, as well as the mechanism to determine whether the retrieval is needed. In this sec..."
-        },
-        {
-          "score": 0.5805057148171147,
-          "chunk_id": "survey_on_rag2_p9_c2",
-          "page": 9,
-          "chunk_index": 2,
-          "preview": "trainable models to offer self-knowledge as the reference for the adaptive calling of a retriever. In traditional RAGs, retrieval necessity judg- ment has also..."
+          "preview": "Gaulle. Algeria and most French colonies became independent in the 1960s, with the majority retaining close economic and military ties with France. France retains its centuries-long status as a global centre of art, science, cuisine and philosophy. It hosts the fourth-largest num..."
         }
       ]
     }
   },
   {
-    "query": "What methods modify the user question before searching?",
+    "query": "Which countries border metropolitan France?",
     "results": {
-      "bm25": [
-        {
-          "score": 8.614198108205752,
-          "chunk_id": "survey_on_rag2_p10_c2",
-          "page": 10,
-          "chunk_index": 2,
-          "preview": "the LLMs’ generation performance highly depends on the input query, numerous training- free RAG approaches employ external knowledge by refining the original pr..."
-        },
-        {
-          "score": 7.550486429689817,
-          "chunk_id": "survey_on_rag2_p6_c6",
-          "page": 6,
-          "chunk_index": 6,
-          "preview": "which adds an intermediate step to process the retrieved documents into a textual summary before in-context augmentation in the generation process. From another..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.14584386976881233,
-          "chunk_id": "survey_on_rag2_p6_c6",
-          "page": 6,
-          "chunk_index": 6,
-          "preview": "which adds an intermediate step to process the retrieved documents into a textual summary before in-context augmentation in the generation process. From another..."
-        },
-        {
-          "score": 0.11453136030783605,
-          "chunk_id": "survey_on_rag2_p5_c2",
-          "page": 5,
-          "chunk_index": 2,
-          "preview": "4: Illustration of the retriever in RA-LLMs, which can be implemented in either dense or sparse manners, each with several key operations. granularity can signi..."
-        }
-      ],
       "dense": [
         {
-          "score": 0.5882085244421976,
-          "chunk_id": "survey_on_rag2_p1_c3",
-          "page": 1,
-          "chunk_index": 3,
-          "preview": "Fine-tuning, In-context Learning, Prompting. ∗Corresponding author: Yujuan Ding 1This is the long version of the survey to appear at KDD 2024 [33] 1 INTRODUCTIO..."
-        },
-        {
-          "score": 0.5822264460669192,
-          "chunk_id": "survey_on_rag2_p4_c1",
-          "page": 4,
-          "chunk_index": 1,
-          "preview": "consists of several major processes: retrieval, generation, and augmentation, as well as the mechanism to determine whether the retrieval is needed. In this sec..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "How can external documents make generated answers more reliable?",
-    "results": {
-      "bm25": [
-        {
-          "score": 10.29784277310475,
-          "chunk_id": "survey_on_rag2_p1_c4",
-          "page": 1,
-          "chunk_index": 4,
-          "preview": "in external databases, can provide faithful and timely external knowledge, thereby serving vital functions in various knowledge-intensive tasks. Due to their po..."
-        },
-        {
-          "score": 9.70112228749701,
-          "chunk_id": "survey_on_rag2_p6_c2",
-          "page": 6,
-          "chunk_index": 2,
-          "preview": "inspire the language model to rethink the generated results and enhance them. Com- pared to applying only the original query, such augmentation may contribute m..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.18912990809444696,
-          "chunk_id": "survey_on_rag2_p1_c4",
-          "page": 1,
-          "chunk_index": 4,
-          "preview": "in external databases, can provide faithful and timely external knowledge, thereby serving vital functions in various knowledge-intensive tasks. Due to their po..."
-        },
-        {
-          "score": 0.11838923776091122,
-          "chunk_id": "survey_on_rag2_p10_c3",
-          "page": 10,
-          "chunk_index": 3,
-          "preview": "Instead of retrieving knowledge from a large corpus, GENREAD [182] first prompts a LLM to generate contextual documents based on the query, and then generate an..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.6521988718607284,
-          "chunk_id": "survey_on_rag2_p10_c3",
-          "page": 10,
-          "chunk_index": 3,
-          "preview": "Instead of retrieving knowledge from a large corpus, GENREAD [182] first prompts a LLM to generate contextual documents based on the query, and then generate an..."
-        },
-        {
-          "score": 0.6378207380989597,
-          "chunk_id": "survey_on_rag2_p6_c2",
-          "page": 6,
-          "chunk_index": 2,
-          "preview": "inspire the language model to rethink the generated results and enhance them. Com- pared to applying only the original query, such augmentation may contribute m..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "What happens when retrieved information is noisy or unrelated?",
-    "results": {
-      "bm25": [
-        {
-          "score": 7.15776060313624,
-          "chunk_id": "survey_on_rag2_p6_c4",
-          "page": 6,
-          "chunk_index": 4,
-          "preview": "for the task, or even worse, harm the generation process [159]. Wang et al. [159], Asai et al. [5], Yu et al. [183] propose different strategies to mitigate the..."
-        },
-        {
-          "score": 6.792028236459639,
-          "chunk_id": "survey_on_rag2_p17_c6",
-          "page": 17,
-          "chunk_index": 6,
-          "preview": "flow.arXiv preprint arXiv:2304.12825 (2023). [145] Ziteng Sun, Ananda Theertha Suresh, Jae Hun Ro, Ahmad Beirami, Himanshu Jain, and Felix Yu. 2024. Spectr: Fas..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.12208686736032327,
-          "chunk_id": "survey_on_rag2_p9_c1",
-          "page": 9,
-          "chunk_index": 1,
-          "preview": "re- trieved passages than on the relevant ones. Therefore, it is critical for RA-LLMs to accurately recall the prior knowledge while selec- tively incorporating..."
-        },
-        {
-          "score": 0.11263942221832682,
-          "chunk_id": "survey_on_rag2_p6_c4",
-          "page": 6,
-          "chunk_index": 4,
-          "preview": "for the task, or even worse, harm the generation process [159]. Wang et al. [159], Asai et al. [5], Yu et al. [183] propose different strategies to mitigate the..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.5802511700785344,
-          "chunk_id": "survey_on_rag2_p9_c3",
-          "page": 9,
-          "chunk_index": 3,
-          "preview": "re- trieval frequency (also called retrieval stride) is an important design aspect to determine the degree of using the retrieval in the gen- eration, thereby g..."
-        },
-        {
-          "score": 0.5678308509137099,
-          "chunk_id": "survey_on_rag2_p4_c8",
-          "page": 4,
+          "score": 0.7747052241968082,
+          "chunk_id": "wiki_France_c8",
+          "page": 2,
           "chunk_index": 8,
-          "preview": "and data. 3.1.2 Retrieval Granularity. Retrieval granularity denotes the re- trieval unit in which the corpus is indexed, e.g., document, passage, token, or oth..."
+          "preview": "and the Netherlands through Saint Martin in the Caribbean. Metropolitan France includes various coastal islands, of which the largest is Corsica. Metropolitan France is situated mostly between latitudes 41° and 51° N, and longitudes 6° W and 10° E, on the western edge of Europe,..."
+        },
+        {
+          "score": 0.7639012105334605,
+          "chunk_id": "wiki_France_c7",
+          "page": 2,
+          "chunk_index": 7,
+          "preview": "English.  Section: Geography The vast majority of France's territory and population is situated in Western Europe and is called Metropolitan France. It is bordered by the North Sea in the north, the English Channel in the northwest, the Atlantic Ocean in the west and the Mediterr..."
+        },
+        {
+          "score": 0.7256522342905376,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many island..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.5983510597871107,
+          "chunk_id": "wiki_France_c8",
+          "page": 2,
+          "chunk_index": 8,
+          "preview": "and the Netherlands through Saint Martin in the Caribbean. Metropolitan France includes various coastal islands, of which the largest is Corsica. Metropolitan France is situated mostly between latitudes 41° and 51° N, and longitudes 6° W and 10° E, on the western edge of Europe,..."
+        },
+        {
+          "score": 0.5927098519743347,
+          "chunk_id": "wiki_France_c7",
+          "page": 2,
+          "chunk_index": 7,
+          "preview": "English.  Section: Geography The vast majority of France's territory and population is situated in Western Europe and is called Metropolitan France. It is bordered by the North Sea in the north, the English Channel in the northwest, the Atlantic Ocean in the west and the Mediterr..."
+        },
+        {
+          "score": 0.5744683917489041,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many island..."
         }
       ]
     }
   },
   {
-    "query": "How can a model answer questions about information not seen during training?",
+    "query": "Who was Albrecht Durer?",
     "results": {
-      "bm25": [
-        {
-          "score": 11.455053820371251,
-          "chunk_id": "survey_on_rag2_p9_c5",
-          "page": 9,
-          "chunk_index": 5,
-          "preview": "strat- egy, which retrieves information for the prediction of every token during the generation. Overall, applying different frequencies of re- trieval can impa..."
-        },
-        {
-          "score": 10.473493387793265,
-          "chunk_id": "survey_on_rag2_p12_c2",
-          "page": 12,
-          "chunk_index": 2,
-          "preview": "91]. To address this limitation, the integration of RA-LLMs has played a cru- cial role in advancing the capabilities of QA systems by enhancing their ability t..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.17725688052355956,
-          "chunk_id": "survey_on_rag2_p9_c5",
-          "page": 9,
-          "chunk_index": 5,
-          "preview": "strat- egy, which retrieves information for the prediction of every token during the generation. Overall, applying different frequencies of re- trieval can impa..."
-        },
-        {
-          "score": 0.147855511084393,
-          "chunk_id": "survey_on_rag2_p10_c3",
-          "page": 10,
-          "chunk_index": 3,
-          "preview": "Instead of retrieving knowledge from a large corpus, GENREAD [182] first prompts a LLM to generate contextual documents based on the query, and then generate an..."
-        }
-      ],
       "dense": [
         {
-          "score": 0.7019351178515156,
-          "chunk_id": "survey_on_rag2_p9_c8",
-          "page": 9,
-          "chunk_index": 8,
-          "preview": "[54, 57, 63], instead of relying solely on the implicit knowledge encoded in the model’s parameters. These approaches have shown significant performance improve..."
-        },
-        {
-          "score": 0.6377409077243763,
-          "chunk_id": "survey_on_rag2_p9_c2",
-          "page": 9,
-          "chunk_index": 2,
-          "preview": "trainable models to offer self-knowledge as the reference for the adaptive calling of a retriever. In traditional RAGs, retrieval necessity judg- ment has also..."
-        }
-      ]
-    }
-  },
-  {
-    "query": "How can retrieved passages be shortened before being given to the generator?",
-    "results": {
-      "bm25": [
-        {
-          "score": 15.82031478499132,
-          "chunk_id": "survey_on_rag2_p6_c6",
-          "page": 6,
-          "chunk_index": 6,
-          "preview": "which adds an intermediate step to process the retrieved documents into a textual summary before in-context augmentation in the generation process. From another..."
-        },
-        {
-          "score": 14.667919054395991,
-          "chunk_id": "survey_on_rag2_p6_c2",
-          "page": 6,
-          "chunk_index": 2,
-          "preview": "inspire the language model to rethink the generated results and enhance them. Com- pared to applying only the original query, such augmentation may contribute m..."
-        }
-      ],
-      "tfidf": [
-        {
-          "score": 0.259952251174813,
-          "chunk_id": "survey_on_rag2_p6_c6",
-          "page": 6,
-          "chunk_index": 6,
-          "preview": "which adds an intermediate step to process the retrieved documents into a textual summary before in-context augmentation in the generation process. From another..."
-        },
-        {
-          "score": 0.1972346491751627,
-          "chunk_id": "survey_on_rag2_p8_c1",
+          "score": 0.8514945588972143,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
           "page": 8,
-          "chunk_index": 1,
-          "preview": "structure to be altered or parameters to be updated. From another perspec- tive, LLMs, even those open for fine-tuning, are large in scale and difficult to tune..."
-        }
-      ],
-      "dense": [
-        {
-          "score": 0.6536295379179802,
-          "chunk_id": "survey_on_rag2_p6_c6",
-          "page": 6,
-          "chunk_index": 6,
-          "preview": "which adds an intermediate step to process the retrieved documents into a textual summary before in-context augmentation in the generation process. From another..."
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
         },
         {
-          "score": 0.618636459311532,
-          "chunk_id": "survey_on_rag2_p6_c3",
-          "page": 6,
+          "score": 0.7045124381137361,
+          "chunk_id": "wiki_Albrecht_Dürer_c8",
+          "page": 8,
+          "chunk_index": 8,
+          "preview": "Schröder ISBN 978-3791352879 Albrecht Dürer, exhibition, Albertina, Vienna, 20 September 2019 – 6 January 2020. Ehrl, Franziska (28 February 2020). \"Schlaglicht: Die einzige erhaltene Radierplatte Albrecht Dürers\". blog.arthistoricum.net (in German). Saxon State and University Li..."
+        },
+        {
+          "score": 0.703622326438211,
+          "chunk_id": "wiki_Albrecht_Dürer_c6",
+          "page": 8,
+          "chunk_index": 6,
+          "preview": "and the Unconscious, eds. J. Hendrix and L. Holm, Farnham Surrey: Ashgate, 2016, pp. 27–44, ISBN 978-1-4724-5647-2. Kurth, Wilhelm (ed.). The Complete Woodcuts of Albrecht Durer, Dover Publications, New York 1963 (2nd ed. 2000), ISBN 0-486-21097-9.  Section: External links  Colvi..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6472546192742792,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
+        },
+        {
+          "score": 0.5653713207546416,
+          "chunk_id": "wiki_Albrecht_Dürer_c8",
+          "page": 8,
+          "chunk_index": 8,
+          "preview": "Schröder ISBN 978-3791352879 Albrecht Dürer, exhibition, Albertina, Vienna, 20 September 2019 – 6 January 2020. Ehrl, Franziska (28 February 2020). \"Schlaglicht: Die einzige erhaltene Radierplatte Albrecht Dürers\". blog.arthistoricum.net (in German). Saxon State and University Li..."
+        },
+        {
+          "score": 0.5650016969879453,
+          "chunk_id": "wiki_Albrecht_Dürer_c6",
+          "page": 8,
+          "chunk_index": 6,
+          "preview": "and the Unconscious, eds. J. Hendrix and L. Holm, Farnham Surrey: Ashgate, 2016, pp. 27–44, ISBN 978-1-4724-5647-2. Kurth, Wilhelm (ed.). The Complete Woodcuts of Albrecht Durer, Dover Publications, New York 1963 (2nd ed. 2000), ISBN 0-486-21097-9.  Section: External links  Colvi..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Albrecht Durer Renaissance artist",
+    "results": {
+      "dense": [
+        {
+          "score": 0.8396497457238498,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
+        },
+        {
+          "score": 0.7497529170642064,
+          "chunk_id": "wiki_Albrecht_Dürer_c8",
+          "page": 8,
+          "chunk_index": 8,
+          "preview": "Schröder ISBN 978-3791352879 Albrecht Dürer, exhibition, Albertina, Vienna, 20 September 2019 – 6 January 2020. Ehrl, Franziska (28 February 2020). \"Schlaglicht: Die einzige erhaltene Radierplatte Albrecht Dürers\". blog.arthistoricum.net (in German). Saxon State and University Li..."
+        },
+        {
+          "score": 0.7483336611665004,
+          "chunk_id": "wiki_Albrecht_Dürer_c4",
+          "page": 8,
+          "chunk_index": 4,
+          "preview": "in Italy, where probably only his altarpiece in Venice was seen, and his German successors were less effective in blending German and Italian styles. His intense and self-dramatizing self-portraits have continued to have a strong influence up to the present, especially on painter..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6384455738384109,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
+        },
+        {
+          "score": 0.5856665940692948,
+          "chunk_id": "wiki_Albrecht_Dürer_c8",
+          "page": 8,
+          "chunk_index": 8,
+          "preview": "Schröder ISBN 978-3791352879 Albrecht Dürer, exhibition, Albertina, Vienna, 20 September 2019 – 6 January 2020. Ehrl, Franziska (28 February 2020). \"Schlaglicht: Die einzige erhaltene Radierplatte Albrecht Dürers\". blog.arthistoricum.net (in German). Saxon State and University Li..."
+        },
+        {
+          "score": 0.5849802831102168,
+          "chunk_id": "wiki_Albrecht_Dürer_c4",
+          "page": 8,
+          "chunk_index": 4,
+          "preview": "in Italy, where probably only his altarpiece in Venice was seen, and his German successors were less effective in blending German and Italian styles. His intense and self-dramatizing self-portraits have continued to have a strong influence up to the present, especially on painter..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What kind of artist was Albrecht Durer?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.8174262690275261,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
+        },
+        {
+          "score": 0.6937526501874342,
+          "chunk_id": "wiki_Albrecht_Dürer_c4",
+          "page": 8,
+          "chunk_index": 4,
+          "preview": "in Italy, where probably only his altarpiece in Venice was seen, and his German successors were less effective in blending German and Italian styles. His intense and self-dramatizing self-portraits have continued to have a strong influence up to the present, especially on painter..."
+        },
+        {
+          "score": 0.6881333279710404,
+          "chunk_id": "wiki_Albrecht_Dürer_c3",
+          "page": 8,
           "chunk_index": 3,
-          "preview": "between the retrieval and generation stages [173], particularly for closed-source generators such as LLMs. For example, Yang et al. [173] propose the Pluggable..."
+          "preview": "his German successors; the \"Little Masters\" who attempted few large engravings but continued Dürer's themes in small, rather cramped compositions. Lucas van Leyden was the only Northern European engraver to successfully continue to produce large engravings in the first third of t..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6233347950497943,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
+        },
+        {
+          "score": 0.5609719528477632,
+          "chunk_id": "wiki_Albrecht_Dürer_c4",
+          "page": 8,
+          "chunk_index": 4,
+          "preview": "in Italy, where probably only his altarpiece in Venice was seen, and his German successors were less effective in blending German and Italian styles. His intense and self-dramatizing self-portraits have continued to have a strong influence up to the present, especially on painter..."
+        },
+        {
+          "score": 0.558731631859206,
+          "chunk_id": "wiki_Albrecht_Dürer_c3",
+          "page": 8,
+          "chunk_index": 3,
+          "preview": "his German successors; the \"Little Masters\" who attempted few large engravings but continued Dürer's themes in small, rather cramped compositions. Lucas van Leyden was the only Northern European engraver to successfully continue to produce large engravings in the first third of t..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What is Helsingin Jalkapalloklubi?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.8037349315266168,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.674133631254032,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
+        },
+        {
+          "score": 0.6666617798930975,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c5",
+          "page": 5,
+          "chunk_index": 5,
+          "preview": "kenttä, and in 1909–1914 at the Eläintarha Stadium. HJK's first official home ground was Töölön Pallokenttä where they played in 1915–1998. During the Veikkausliiga era, HJK played their home matches occasionally also at the Helsinki Olympic Stadium.  Section: Transfers HJK Helsi..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.614808696792647,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.5533117049099044,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
+        },
+        {
+          "score": 0.5505084472237197,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c5",
+          "page": 5,
+          "chunk_index": 5,
+          "preview": "kenttä, and in 1909–1914 at the Eläintarha Stadium. HJK's first official home ground was Töölön Pallokenttä where they played in 1915–1998. During the Veikkausliiga era, HJK played their home matches occasionally also at the Helsinki Olympic Stadium.  Section: Transfers HJK Helsi..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "HJK Helsinki Finnish football club",
+    "results": {
+      "dense": [
+        {
+          "score": 0.8533149793810083,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.7960988607267911,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "of Finland's most successful players have played for HJK before moving abroad. The club has also similar success with women's Kansallinen Liiga. HJK is the only Finnish club that has participated in the UEFA Champions League group stage. In 1998, they beat Metz in the play-off ro..."
+        },
+        {
+          "score": 0.7771445442231573,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6486613605800806,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.6102792957829827,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "of Finland's most successful players have played for HJK before moving abroad. The club has also similar success with women's Kansallinen Liiga. HJK is the only Finnish club that has participated in the UEFA Champions League group stage. In 1998, they beat Metz in the play-off ro..."
+        },
+        {
+          "score": 0.599658500429882,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was established in 1997, when the club celebrated its 90th anniversary. Initially 16 people were named, after whi..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What does HJK refer to in Finnish football?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.8369620186247702,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.8110412422676941,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "of Finland's most successful players have played for HJK before moving abroad. The club has also similar success with women's Kansallinen Liiga. HJK is the only Finnish club that has participated in the UEFA Champions League group stage. In 1998, they beat Metz in the play-off ro..."
+        },
+        {
+          "score": 0.7838889836982292,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c5",
+          "page": 5,
+          "chunk_index": 5,
+          "preview": "kenttä, and in 1909–1914 at the Eläintarha Stadium. HJK's first official home ground was Töölön Pallokenttä where they played in 1915–1998. During the Veikkausliiga era, HJK played their home matches occasionally also at the Helsinki Olympic Stadium.  Section: Transfers HJK Helsi..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.636524817271339,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK (Finnish: ['hoː jiː koː]), is a Finnish football club based in Helsinki. The club competes in Veikk..."
+        },
+        {
+          "score": 0.6192909033691663,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "of Finland's most successful players have played for HJK before moving abroad. The club has also similar success with women's Kansallinen Liiga. HJK is the only Finnish club that has participated in the UEFA Champions League group stage. In 1998, they beat Metz in the play-off ro..."
+        },
+        {
+          "score": 0.603341533376156,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c5",
+          "page": 5,
+          "chunk_index": 5,
+          "preview": "kenttä, and in 1909–1914 at the Eläintarha Stadium. HJK's first official home ground was Töölön Pallokenttä where they played in 1915–1998. During the Veikkausliiga era, HJK played their home matches occasionally also at the Helsinki Olympic Stadium.  Section: Transfers HJK Helsi..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Where is Nuremberg located?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.7983293427403638,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo stretching over more than 60 hectares (148 acres) in the Nuremberg Reichswald (or Nürnberger Reichsw..."
+        },
+        {
+          "score": 0.7914753715117689,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria and the largest city in the cultural region of Franconia. Its 546,397 (2024) inhabitants make it the..."
+        },
+        {
+          "score": 0.7901882459136781,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg has historically been left-leaning in the conservative state of Bavaria – since the end of World War I..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6115866082390252,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo stretching over more than 60 hectares (148 acres) in the Nuremberg Reichswald (or Nürnberger Reichsw..."
+        },
+        {
+          "score": 0.6076096748749756,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria and the largest city in the cultural region of Franconia. Its 546,397 (2024) inhabitants make it the..."
+        },
+        {
+          "score": 0.6068759041188838,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg has historically been left-leaning in the conservative state of Bavaria – since the end of World War I..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Nuremberg Bavaria Germany city",
+    "results": {
+      "dense": [
+        {
+          "score": 0.8245136345159763,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria and the largest city in the cultural region of Franconia. Its 546,397 (2024) inhabitants make it the..."
+        },
+        {
+          "score": 0.8121149002908701,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg has historically been left-leaning in the conservative state of Bavaria – since the end of World War I..."
+        },
+        {
+          "score": 0.7790749784721094,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo stretching over more than 60 hectares (148 acres) in the Nuremberg Reichswald (or Nürnberger Reichsw..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6279713082214614,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria and the largest city in the cultural region of Franconia. Its 546,397 (2024) inhabitants make it the..."
+        },
+        {
+          "score": 0.6199624933375694,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg has historically been left-leaning in the conservative state of Bavaria – since the end of World War I..."
+        },
+        {
+          "score": 0.6007023983354793,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo stretching over more than 60 hectares (148 acres) in the Nuremberg Reichswald (or Nürnberger Reichsw..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What German state is Nuremberg in?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.7938674720613179,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria and the largest city in the cultural region of Franconia. Its 546,397 (2024) inhabitants make it the..."
+        },
+        {
+          "score": 0.7819963906642433,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg has historically been left-leaning in the conservative state of Bavaria – since the end of World War I..."
+        },
+        {
+          "score": 0.7670019082726932,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo stretching over more than 60 hectares (148 acres) in the Nuremberg Reichswald (or Nürnberger Reichsw..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6089842190225931,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria and the largest city in the cultural region of Franconia. Its 546,397 (2024) inhabitants make it the..."
+        },
+        {
+          "score": 0.6022977792189378,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg has historically been left-leaning in the conservative state of Bavaria – since the end of World War I..."
+        },
+        {
+          "score": 0.5943045381994446,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo stretching over more than 60 hectares (148 acres) in the Nuremberg Reichswald (or Nürnberger Reichsw..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Which city is associated with Albrecht Durer and Bavaria?",
+    "results": {
+      "dense": [
+        {
+          "score": 0.7903856151868806,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
+        },
+        {
+          "score": 0.7640456345951089,
+          "chunk_id": "wiki_Nuremberg_c5",
+          "page": 9,
+          "chunk_index": 5,
+          "preview": "tourist destination for foreigners and Germans alike. After World War II, many medieval-style areas of the town were rebuilt.  Section: Culture Nuremberg was an early centre of humanism, science, printing, and mechanical invention. The city contributed much to the science of astr..."
+        },
+        {
+          "score": 0.7488949809279254,
+          "chunk_id": "wiki_Nuremberg_c1",
+          "page": 9,
+          "chunk_index": 1,
+          "preview": "significance, imperial diets were frequently held there, and the Imperial Regalia were kept in the city from 1424 until the end of the empire. During the Late Middle Ages and the Renaissance, Nuremberg was also a centre of art, publishing, and scientific innovation, and was assoc..."
+        }
+      ],
+      "dense_euclidean": [
+        {
+          "score": 0.6069881634092037,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his r..."
+        },
+        {
+          "score": 0.5927837016712318,
+          "chunk_id": "wiki_Nuremberg_c5",
+          "page": 9,
+          "chunk_index": 5,
+          "preview": "tourist destination for foreigners and Germans alike. After World War II, many medieval-style areas of the town were rebuilt.  Section: Culture Nuremberg was an early centre of humanism, science, printing, and mechanical invention. The city contributed much to the science of astr..."
+        },
+        {
+          "score": 0.5852513231816047,
+          "chunk_id": "wiki_Nuremberg_c1",
+          "page": 9,
+          "chunk_index": 1,
+          "preview": "significance, imperial diets were frequently held there, and the Imperial Regalia were kept in the city from 1424 until the end of the empire. During the Late Middle Ages and the Renaissance, Nuremberg was also a centre of art, publishing, and scientific innovation, and was assoc..."
         }
       ]
     }

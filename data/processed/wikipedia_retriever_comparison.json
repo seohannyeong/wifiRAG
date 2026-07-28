@@ -1,0 +1,638 @@
+[
+  {
+    "query": "Where is Chatou located?",
+    "results": {
+      "bm25": [
+        {
+          "score": 8.124323167910958,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Îl..."
+        },
+        {
+          "score": 8.071657788653063,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affl..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.22833785005442714,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affl..."
+        },
+        {
+          "score": 0.20704878788463466,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the N..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8170097247425286,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affl..."
+        },
+        {
+          "score": 0.7052229009326154,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the N..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Chatou commune Yvelines France",
+    "results": {
+      "bm25": [
+        {
+          "score": 18.21364931747985,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affl..."
+        },
+        {
+          "score": 8.753662242009566,
+          "chunk_id": "wiki_Chatou_c1",
+          "page": 1,
+          "chunk_index": 1,
+          "preview": "to create the commune of Le Vésinet. It boasts many bourgeois mansions of every kind of architecture and owned by private individuals.  Chatou is home to Maison Fournaise on the Îl..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.3199131021299793,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affl..."
+        },
+        {
+          "score": 0.17977045791000235,
+          "chunk_id": "wiki_France_c18",
+          "page": 2,
+          "chunk_index": 18,
+          "preview": "percent per year; since 2011, annual growth has been between 0.4 and 0.5 percent annually, and France is projected to continue growing until 2044. Immigrants are major contributors..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8039382030536778,
+          "chunk_id": "wiki_Chatou_c0",
+          "page": 1,
+          "chunk_index": 0,
+          "preview": "Entity: Chatou  Summary: Chatou (French pronunciation: [ʃatu] ) is a commune in the Yvelines department in the Île-de-France region in northern France. Chatou is a part of the affl..."
+        },
+        {
+          "score": 0.6883624169850571,
+          "chunk_id": "wiki_Chatou_c2",
+          "page": 1,
+          "chunk_index": 2,
+          "preview": "festive atmosphere inspired Impressionist painters such as Claude Monet, Edgar Degas, Alfred Sisley, Gustave Caillebotte and especially Renoir.  On 25 August 1944, in Chatou, the N..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What is Yangju Citizen Football Club?",
+    "results": {
+      "bm25": [
+        {
+          "score": 23.384086593859955,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of..."
+        },
+        {
+          "score": 5.878347579102082,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.5770898906578341,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of..."
+        },
+        {
+          "score": 0.14652031473727958,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8970844675436014,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of..."
+        },
+        {
+          "score": 0.6473681355890044,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Yangju Citizen football club K3 League",
+    "results": {
+      "bm25": [
+        {
+          "score": 31.23884059903415,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of..."
+        },
+        {
+          "score": 5.659510026906797,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.7018181042273988,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of..."
+        },
+        {
+          "score": 0.14371722840435489,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8674175624039444,
+          "chunk_id": "wiki_Yangju_Citizen_FC_c0",
+          "page": 3,
+          "chunk_index": 0,
+          "preview": "Entity: Yangju_Citizen_FC  Summary: Yangju Citizen Football Club (양주 시민 축구단) is a South Korean football club based in the city of Yangju, located south of Dongducheon and north of..."
+        },
+        {
+          "score": 0.6249924340937073,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What country is France located in Western Europe?",
+    "results": {
+      "bm25": [
+        {
+          "score": 16.592492428028613,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in Sou..."
+        },
+        {
+          "score": 12.613318758815254,
+          "chunk_id": "wiki_France_c11",
+          "page": 2,
+          "chunk_index": 11,
+          "preview": "countries, the Organisation for Economic Co-operation and Development (OECD), and the G20. France ranked 13th in the 2025 Global Innovation Index. The economy is highly diversified..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.19876439469224141,
+          "chunk_id": "wiki_France_c18",
+          "page": 2,
+          "chunk_index": 18,
+          "preview": "percent per year; since 2011, annual growth has been between 0.4 and 0.5 percent annually, and France is projected to continue growing until 2044. Immigrants are major contributors..."
+        },
+        {
+          "score": 0.18163884732750327,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in Sou..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.7482833483969575,
+          "chunk_id": "wiki_France_c8",
+          "page": 2,
+          "chunk_index": 8,
+          "preview": "and the Netherlands through Saint Martin in the Caribbean. Metropolitan France includes various coastal islands, of which the largest is Corsica. Metropolitan France is situated mo..."
+        },
+        {
+          "score": 0.7347063114921979,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in Sou..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "France French Republic Western Europe",
+    "results": {
+      "bm25": [
+        {
+          "score": 14.41755263300728,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in Sou..."
+        },
+        {
+          "score": 12.273408025886923,
+          "chunk_id": "wiki_France_c2",
+          "page": 2,
+          "chunk_index": 2,
+          "preview": "known as the Hundred Years' War. In the 16th century, French culture flourished during the French Renaissance, and a French colonial empire emerged. Internally, France was dominate..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.30460300058961415,
+          "chunk_id": "wiki_France_c2",
+          "page": 2,
+          "chunk_index": 2,
+          "preview": "known as the Hundred Years' War. In the 16th century, French culture flourished during the French Renaissance, and a French colonial empire emerged. Internally, France was dominate..."
+        },
+        {
+          "score": 0.2837868153008414,
+          "chunk_id": "wiki_France_c3",
+          "page": 2,
+          "chunk_index": 3,
+          "preview": "Bourbon Restoration until the founding of the French Second Republic, which was succeeded by the Second French Empire upon Napoleon III's takeover. His empire collapsed during the..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.6933763526018685,
+          "chunk_id": "wiki_France_c0",
+          "page": 2,
+          "chunk_index": 0,
+          "preview": "Entity: France  Summary: France, officially the French Republic, is a country primarily located in Western Europe. Its overseas regions and territories include French Guiana in Sou..."
+        },
+        {
+          "score": 0.6826844787874428,
+          "chunk_id": "wiki_France_c2",
+          "page": 2,
+          "chunk_index": 2,
+          "preview": "known as the Hundred Years' War. In the 16th century, French culture flourished during the French Renaissance, and a French colonial empire emerged. Internally, France was dominate..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Who was Albrecht Durer?",
+    "results": {
+      "bm25": [
+        {
+          "score": 9.493534324976176,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German pai..."
+        },
+        {
+          "score": 9.345405897623365,
+          "chunk_id": "wiki_Albrecht_Dürer_c6",
+          "page": 8,
+          "chunk_index": 6,
+          "preview": "and the Unconscious, eds. J. Hendrix and L. Holm, Farnham Surrey: Ashgate, 2016, pp. 27–44, ISBN 978-1-4724-5647-2. Kurth, Wilhelm (ed.). The Complete Woodcuts of Albrecht Durer, D..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.26611556965877126,
+          "chunk_id": "wiki_Albrecht_Dürer_c6",
+          "page": 8,
+          "chunk_index": 6,
+          "preview": "and the Unconscious, eds. J. Hendrix and L. Holm, Farnham Surrey: Ashgate, 2016, pp. 27–44, ISBN 978-1-4724-5647-2. Kurth, Wilhelm (ed.). The Complete Woodcuts of Albrecht Durer, D..."
+        },
+        {
+          "score": 0.2073406981913163,
+          "chunk_id": "wiki_Albrecht_Dürer_c5",
+          "page": 8,
+          "chunk_index": 5,
+          "preview": "– along with other works of art were stolen from the National Art Museum of Azerbaijan. The drawings were later recovered.  Section: List of works List of paintings by Albrecht Dür..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8514945588972143,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German pai..."
+        },
+        {
+          "score": 0.7045124381137361,
+          "chunk_id": "wiki_Albrecht_Dürer_c8",
+          "page": 8,
+          "chunk_index": 8,
+          "preview": "Schröder ISBN 978-3791352879 Albrecht Dürer, exhibition, Albertina, Vienna, 20 September 2019 – 6 January 2020. Ehrl, Franziska (28 February 2020). \"Schlaglicht: Die einzige erhalt..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Albrecht Durer Renaissance artist",
+    "results": {
+      "bm25": [
+        {
+          "score": 10.697877946919204,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German pai..."
+        },
+        {
+          "score": 9.345405897623365,
+          "chunk_id": "wiki_Albrecht_Dürer_c6",
+          "page": 8,
+          "chunk_index": 6,
+          "preview": "and the Unconscious, eds. J. Hendrix and L. Holm, Farnham Surrey: Ashgate, 2016, pp. 27–44, ISBN 978-1-4724-5647-2. Kurth, Wilhelm (ed.). The Complete Woodcuts of Albrecht Durer, D..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.20451762235745474,
+          "chunk_id": "wiki_Albrecht_Dürer_c6",
+          "page": 8,
+          "chunk_index": 6,
+          "preview": "and the Unconscious, eds. J. Hendrix and L. Holm, Farnham Surrey: Ashgate, 2016, pp. 27–44, ISBN 978-1-4724-5647-2. Kurth, Wilhelm (ed.). The Complete Woodcuts of Albrecht Durer, D..."
+        },
+        {
+          "score": 0.15934740934698613,
+          "chunk_id": "wiki_Albrecht_Dürer_c5",
+          "page": 8,
+          "chunk_index": 5,
+          "preview": "– along with other works of art were stolen from the National Art Museum of Azerbaijan. The drawings were later recovered.  Section: List of works List of paintings by Albrecht Dür..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8396497457238498,
+          "chunk_id": "wiki_Albrecht_Dürer_c0",
+          "page": 8,
+          "chunk_index": 0,
+          "preview": "Entity: Albrecht_Dürer  Summary: Albrecht Dürer ( DURE-ər, German: [ˈalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528), sometimes spelled in English as Durer or Duerer, was a German pai..."
+        },
+        {
+          "score": 0.7497529170642064,
+          "chunk_id": "wiki_Albrecht_Dürer_c8",
+          "page": 8,
+          "chunk_index": 8,
+          "preview": "Schröder ISBN 978-3791352879 Albrecht Dürer, exhibition, Albertina, Vienna, 20 September 2019 – 6 January 2020. Ehrl, Franziska (28 February 2020). \"Schlaglicht: Die einzige erhalt..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What is Helsingin Jalkapalloklubi?",
+    "results": {
+      "bm25": [
+        {
+          "score": 14.727268478575045,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        },
+        {
+          "score": 3.7218517801677478,
+          "chunk_id": "wiki_The_Bad_Seed_(1956_film)_c8",
+          "page": 31,
+          "chunk_index": 8,
+          "preview": "only produce the film for Warner Bros. Pictures upon approval by the PCA. Adler contacted Shurlock demanding to know why approval had been given. Shurlock responded that director M..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.2272212566383295,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        },
+        {
+          "score": 0.0459473741125399,
+          "chunk_id": "wiki_Trinity_University_(Texas)_c7",
+          "page": 7,
+          "chunk_index": 7,
+          "preview": "and The Center for the Sciences and Innovation have been registered with the Green Building Council's LEED program and are awaiting certification. Trinity is a member of the Presid..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8037349315266168,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        },
+        {
+          "score": 0.674133631254032,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c6",
+          "page": 5,
+          "chunk_index": 6,
+          "preview": "clubs from HJK.  Section: Reserve team HJK's reserve team Klubi 04 currently plays in the Ykkösliiga, Finnish second tier.  Section: Hall of Fame The HJK Hall of Fame was establish..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "HJK Helsinki Finnish football club",
+    "results": {
+      "bm25": [
+        {
+          "score": 19.217413758247893,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        },
+        {
+          "score": 15.327217909946757,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c3",
+          "page": 5,
+          "chunk_index": 3,
+          "preview": "seasons in Veikkausliiga/Mestaruussarja/SM-Sarja 6 seasons in Ykkönen/Suomisarja Sources:  Section: Supporters and rivalries HJK Helsinki supporters Historically HJK had a wide sup..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.6282534673422643,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        },
+        {
+          "score": 0.3791724673471221,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c3",
+          "page": 5,
+          "chunk_index": 3,
+          "preview": "seasons in Veikkausliiga/Mestaruussarja/SM-Sarja 6 seasons in Ykkönen/Suomisarja Sources:  Section: Supporters and rivalries HJK Helsinki supporters Historically HJK had a wide sup..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8533149793810083,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c0",
+          "page": 5,
+          "chunk_index": 0,
+          "preview": "Entity: Helsingin_Jalkapalloklubi  Summary: Helsingin Jalkapalloklubi (lit. 'Helsinki's Football Club'), commonly known as HJK Helsinki (Swedish: HJK Helsingfors), or simply as HJK..."
+        },
+        {
+          "score": 0.7960988607267911,
+          "chunk_id": "wiki_Helsingin_Jalkapalloklubi_c1",
+          "page": 5,
+          "chunk_index": 1,
+          "preview": "of Finland's most successful players have played for HJK before moving abroad. The club has also similar success with women's Kansallinen Liiga. HJK is the only Finnish club that h..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Where is Nuremberg located?",
+    "results": {
+      "bm25": [
+        {
+          "score": 8.538094955780338,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo..."
+        },
+        {
+          "score": 8.174902447702404,
+          "chunk_id": "wiki_Nuremberg_c4",
+          "page": 9,
+          "chunk_index": 4,
+          "preview": "a strong base in the city. Nuremberg is still an important industrial centre with a strong standing in the markets of Central and Eastern Europe. Items manufactured in the area inc..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.2689529040570865,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo..."
+        },
+        {
+          "score": 0.23288273817917116,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg ha..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.7983293427403638,
+          "chunk_id": "wiki_Nuremberg_c11",
+          "page": 9,
+          "chunk_index": 11,
+          "preview": "The Rochusfriedhof or the Wöhrder Kirchhof are near the Old Town. The Chain Bridge (Kettensteg), the first chain bridge on the European continent. The Tiergarten Nürnberg is a zoo..."
+        },
+        {
+          "score": 0.7914753715117689,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria a..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "Nuremberg Bavaria Germany city",
+    "results": {
+      "bm25": [
+        {
+          "score": 12.035162574571794,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria a..."
+        },
+        {
+          "score": 9.967401001696954,
+          "chunk_id": "wiki_Nuremberg_c1",
+          "page": 9,
+          "chunk_index": 1,
+          "preview": "significance, imperial diets were frequently held there, and the Imperial Regalia were kept in the city from 1424 until the end of the empire. During the Late Middle Ages and the R..."
+        }
+      ],
+      "tfidf": [
+        {
+          "score": 0.2847729679021827,
+          "chunk_id": "wiki_Nuremberg_c1",
+          "page": 9,
+          "chunk_index": 1,
+          "preview": "significance, imperial diets were frequently held there, and the Imperial Regalia were kept in the city from 1424 until the end of the empire. During the Late Middle Ages and the R..."
+        },
+        {
+          "score": 0.27740060667817634,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria a..."
+        }
+      ],
+      "dense": [
+        {
+          "score": 0.8245136345159763,
+          "chunk_id": "wiki_Nuremberg_c0",
+          "page": 9,
+          "chunk_index": 0,
+          "preview": "Entity: Nuremberg  Summary: Nuremberg ( NURE-əm-burg; German: Nürnberg [ˈnʏʁnbɛʁk] ; Mainfränkisch: Nämberch [ˈnɛmbɛrç]) is the second-largest city in the German state of Bavaria a..."
+        },
+        {
+          "score": 0.8121149002908701,
+          "chunk_id": "wiki_Nuremberg_c12",
+          "page": 9,
+          "chunk_index": 12,
+          "preview": "represented in the Bundestag by two constituencies; Nuremberg North and Nuremberg South. Since 2002, both constituencies have been held by the CSU. At the local level, Nuremberg ha..."
+        }
+      ]
+    }
+  }
+]

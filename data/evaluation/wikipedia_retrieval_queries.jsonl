@@ -1,0 +1,21 @@
+{"query": "Where is Chatou located?", "expected_entity": "Chatou", "expected_terms": ["Yvelines", "France", "Seine"]}
+{"query": "Chatou commune Yvelines France", "expected_entity": "Chatou", "expected_terms": ["commune", "Yvelines", "France"]}
+{"query": "What is Yangju Citizen Football Club?", "expected_entity": "Yangju_Citizen_FC", "expected_terms": ["South Korean", "football club", "K3 League"]}
+{"query": "Yangju Citizen football club K3 League", "expected_entity": "Yangju_Citizen_FC", "expected_terms": ["Yangju", "football club", "K3 League"]}
+{"query": "What country is France located in Western Europe?", "expected_entity": "France", "expected_terms": ["Western Europe", "French Republic", "Paris"]}
+{"query": "France French Republic Western Europe", "expected_entity": "France", "expected_terms": ["French Republic", "Western Europe"]}
+{"query": "Who was Albrecht Durer?", "expected_entity": "Albrecht_Dürer", "expected_terms": ["German", "painter", "printmaker"]}
+{"query": "Albrecht Durer Renaissance artist", "expected_entity": "Albrecht_Dürer", "expected_terms": ["Renaissance", "artist"]}
+{"query": "What is Helsingin Jalkapalloklubi?", "expected_entity": "Helsingin_Jalkapalloklubi", "expected_terms": ["Finnish", "football club", "Helsinki"]}
+{"query": "HJK Helsinki Finnish football club", "expected_entity": "Helsingin_Jalkapalloklubi", "expected_terms": ["HJK", "Helsinki", "football club"]}
+{"query": "Where is Nuremberg located?", "expected_entity": "Nuremberg", "expected_terms": ["Bavaria", "Germany"]}
+{"query": "Nuremberg Bavaria Germany city", "expected_entity": "Nuremberg", "expected_terms": ["Bavaria", "Germany"]}
+{"query": "Which river is Chatou located near?", "expected_entity": "Chatou", "expected_terms": ["Seine", "Paris", "Chatou"]}
+{"query": "What place in Chatou was connected to Impressionist painters?", "expected_entity": "Chatou", "expected_terms": ["Maison Fournaise", "Impressionist", "Renoir"]}
+{"query": "Which league does Yangju Citizen FC play in?", "expected_entity": "Yangju_Citizen_FC", "expected_terms": ["K3 League", "football club", "Yangju"]}
+{"query": "What is the capital and largest city of France?", "expected_entity": "France", "expected_terms": ["Paris", "capital", "largest city"]}
+{"query": "Which countries border metropolitan France?", "expected_entity": "France", "expected_terms": ["Belgium", "Germany", "Spain"]}
+{"query": "What kind of artist was Albrecht Durer?", "expected_entity": "Albrecht_D체rer", "expected_terms": ["painter", "printmaker", "German"]}
+{"query": "What does HJK refer to in Finnish football?", "expected_entity": "Helsingin_Jalkapalloklubi", "expected_terms": ["HJK", "Helsinki", "football"]}
+{"query": "What German state is Nuremberg in?", "expected_entity": "Nuremberg", "expected_terms": ["Bavaria", "Germany"]}
+{"query": "Which city is associated with Albrecht Durer and Bavaria?", "expected_entity": "Nuremberg", "expected_terms": ["Nuremberg", "Bavaria", "Albrecht"]}
