@@ -1,5 +1,52 @@
 # wikiRAG
 
+## Wikipedia RAG Generation
+
+Hybrid retriever가 찾은 Wikipedia chunk를 context로 사용해 Ollama가 답변을 생성합니다.
+
+필요한 Ollama 모델:
+
+```powershell
+ollama pull nomic-embed-text
+ollama pull gemma3:4b
+```
+
+기본 실행:
+
+```powershell
+python .\scripts\generation\rag_generator.py "Which country has Paris as its capital?"
+```
+
+현재 Wikipedia chunk가 영어이고 검색 모델도 영어 검색을 기준으로 사용하므로,
+우선 영어 질문으로 테스트합니다. 한국어 질문은 추후 query translation 또는
+multilingual embedding을 추가해 보완할 수 있습니다.
+
+검색된 context 전체를 함께 확인:
+
+```powershell
+python .\scripts\generation\rag_generator.py "Which country has Paris as its capital?" --show-context
+```
+
+Weighted RRF를 적용해 생성:
+
+```powershell
+python .\scripts\generation\rag_generator.py `
+  "Find the article about a semi-professional football team from Gyeonggi Province." `
+  --bm25-weight 0.1 `
+  --dense-weight 1.0 `
+  --top-k 3
+```
+
+```text
+Question
+  -> BM25 + Dense retrieval
+  -> RRF or Weighted RRF fusion
+  -> Top-k Wikipedia chunks
+  -> Prompt context
+  -> Ollama generation
+  -> Answer with source labels
+```
+
 Wikipedia 기반 RAG System PART 2 실험 코드입니다.
 
 이 프로젝트는 논문 PDF를 RAG에서 검색할 수 있는 형태로 변환하고, 같은 chunk 데이터에 대해 BM25, TF-IDF, Dense Ollama retriever를 실행 및 비교하는 것을 목표로 합니다.

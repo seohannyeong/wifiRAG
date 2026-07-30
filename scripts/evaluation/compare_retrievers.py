@@ -87,7 +87,14 @@ def trim_result(result: dict, preview_chars: int) -> dict:
         "preview": preview,
     }
 
-    for key in ["bm25_rank", "bm25_score", "dense_rank", "dense_score"]:
+    for key in [
+        "bm25_rank",
+        "bm25_score",
+        "bm25_rrf_score",
+        "dense_rank",
+        "dense_score",
+        "dense_rrf_score",
+    ]:
         if key in result:
             trimmed[key] = result[key]
 
@@ -153,6 +160,8 @@ def build_hybrid_runner(
     rebuild_cache: bool,
     candidate_k: int,
     rrf_k: int,
+    bm25_weight: float,
+    dense_weight: float,
 ):
     bm25 = bm25_retriever.build_bm25(chunks)
     dense_ollama_retriever.check_ollama(ollama_url, timeout)
@@ -177,6 +186,8 @@ def build_hybrid_runner(
             top_k=top_k,
             candidate_k=candidate_k,
             rrf_k=rrf_k,
+            bm25_weight=bm25_weight,
+            dense_weight=dense_weight,
         )
 
     return run
@@ -309,6 +320,18 @@ def main() -> None:
         default=hybrid_retriever.DEFAULT_RRF_K,
         help="RRF smoothing constant for hybrid",
     )
+    parser.add_argument(
+        "--bm25-weight",
+        type=float,
+        default=hybrid_retriever.DEFAULT_BM25_WEIGHT,
+        help="BM25 reciprocal-rank weight for hybrid",
+    )
+    parser.add_argument(
+        "--dense-weight",
+        type=float,
+        default=hybrid_retriever.DEFAULT_DENSE_WEIGHT,
+        help="Dense reciprocal-rank weight for hybrid",
+    )
     args = parser.parse_args()
 
     queries = args.queries or DEFAULT_QUERIES
@@ -346,6 +369,8 @@ def main() -> None:
             rebuild_cache=args.rebuild_dense_cache,
             candidate_k=args.candidate_k,
             rrf_k=args.rrf_k,
+            bm25_weight=args.bm25_weight,
+            dense_weight=args.dense_weight,
         )
 
     comparison = []

@@ -20,6 +20,8 @@ if hasattr(sys.stdout, "reconfigure"):
 
 DEFAULT_RRF_K = 60
 DEFAULT_CANDIDATE_K = 20
+DEFAULT_BM25_WEIGHT = 1.0
+DEFAULT_DENSE_WEIGHT = 1.0
 
 
 def load_chunks(path: Path) -> list[dict]:
@@ -42,13 +44,24 @@ def reciprocal_rank(rank: int | None, rrf_k: int) -> float:
     return 1 / (rrf_k + rank)
 
 
+def validate_weights(bm25_weight: float, dense_weight: float) -> None:
+    if bm25_weight < 0 or dense_weight < 0:
+        raise ValueError("Retriever weights must be zero or greater.")
+    if bm25_weight == 0 and dense_weight == 0:
+        raise ValueError("At least one retriever weight must be greater than zero.")
+
+
 def rrf_fusion(
     chunks: list[dict],
     bm25_results: list[dict],
     dense_results: list[dict],
     top_k: int,
     rrf_k: int,
+    bm25_weight: float = DEFAULT_BM25_WEIGHT,
+    dense_weight: float = DEFAULT_DENSE_WEIGHT,
 ) -> list[dict]:
+    validate_weights(bm25_weight, dense_weight)
+
     chunk_by_id = {chunk["chunk_id"]: chunk for chunk in chunks}
     bm25_by_id = index_results(bm25_results)
     dense_by_id = index_results(dense_results)
@@ -61,10 +74,9 @@ def rrf_fusion(
         bm25_score = bm25_by_id.get(chunk_id, {}).get("score")
         dense_score = dense_by_id.get(chunk_id, {}).get("score")
 
-        hybrid_score = (
-            reciprocal_rank(bm25_rank, rrf_k)
-            + reciprocal_rank(dense_rank, rrf_k)
-        )
+        bm25_rrf_score = bm25_weight * reciprocal_rank(bm25_rank, rrf_k)
+        dense_rrf_score = dense_weight * reciprocal_rank(dense_rank, rrf_k)
+        hybrid_score = bm25_rrf_score + dense_rrf_score
 
         chunk = chunk_by_id[chunk_id]
         fused_results.append(
@@ -76,8 +88,10 @@ def rrf_fusion(
                 "chunk_index": chunk["chunk_index"],
                 "bm25_rank": bm25_rank,
                 "bm25_score": bm25_score,
+                "bm25_rrf_score": float(bm25_rrf_score),
                 "dense_rank": dense_rank,
                 "dense_score": dense_score,
+                "dense_rrf_score": float(dense_rrf_score),
                 "text": chunk["text"],
             }
         )
@@ -96,7 +110,10 @@ def search(
     top_k: int,
     candidate_k: int = DEFAULT_CANDIDATE_K,
     rrf_k: int = DEFAULT_RRF_K,
+    bm25_weight: float = DEFAULT_BM25_WEIGHT,
+    dense_weight: float = DEFAULT_DENSE_WEIGHT,
 ) -> list[dict]:
+    validate_weights(bm25_weight, dense_weight)
     candidate_k = max(candidate_k, top_k)
     bm25_results = bm25_retriever.search(query, chunks, bm25, candidate_k)
     dense_results = dense_ollama_retriever.search(
@@ -115,6 +132,8 @@ def search(
         dense_results=dense_results,
         top_k=top_k,
         rrf_k=rrf_k,
+        bm25_weight=bm25_weight,
+        dense_weight=dense_weight,
     )
 
 
@@ -135,8 +154,10 @@ def print_results(query: str, results: list[dict]) -> None:
         print(
             f"    bm25_rank={result['bm25_rank']} "
             f"bm25_score={format_optional_score(result['bm25_score'])} "
+            f"bm25_rrf={result['bm25_rrf_score']:.6f} "
             f"dense_rank={result['dense_rank']} "
-            f"dense_score={format_optional_score(result['dense_score'])}"
+            f"dense_score={format_optional_score(result['dense_score'])} "
+            f"dense_rrf={result['dense_rrf_score']:.6f}"
         )
         print(f"    {preview}")
         print()
@@ -165,6 +186,18 @@ def main() -> None:
         type=int,
         default=DEFAULT_RRF_K,
         help="RRF smoothing constant",
+    )
+    parser.add_argument(
+        "--bm25-weight",
+        type=float,
+        default=DEFAULT_BM25_WEIGHT,
+        help="Weight applied to the BM25 reciprocal-rank score",
+    )
+    parser.add_argument(
+        "--dense-weight",
+        type=float,
+        default=DEFAULT_DENSE_WEIGHT,
+        help="Weight applied to the dense reciprocal-rank score",
     )
     parser.add_argument("--model", default=dense_ollama_retriever.DEFAULT_MODEL)
     parser.add_argument("--ollama-url", default=dense_ollama_retriever.DEFAULT_OLLAMA_URL)
@@ -196,6 +229,8 @@ def main() -> None:
             top_k=args.top_k,
             candidate_k=args.candidate_k,
             rrf_k=args.rrf_k,
+            bm25_weight=args.bm25_weight,
+            dense_weight=args.dense_weight,
         )
         print_results(args.query, results)
         return
@@ -219,6 +254,8 @@ def main() -> None:
             top_k=args.top_k,
             candidate_k=args.candidate_k,
             rrf_k=args.rrf_k,
+            bm25_weight=args.bm25_weight,
+            dense_weight=args.dense_weight,
         )
         print_results(query, results)
 
