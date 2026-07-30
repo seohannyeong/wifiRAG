@@ -14,6 +14,7 @@ sys.path.append(str(RETRIEVAL_DIR))
 
 import bm25_retriever
 import dense_ollama_retriever
+import hybrid_retriever
 import tfidf_retriever
 
 
@@ -78,13 +79,19 @@ def trim_result(result: dict, preview_chars: int) -> dict:
     if len(preview) > preview_chars:
         preview = preview[:preview_chars].rstrip() + "..."
 
-    return {
+    trimmed = {
         "score": result["score"],
         "chunk_id": result["chunk_id"],
         "page": result["page"],
         "chunk_index": result["chunk_index"],
         "preview": preview,
     }
+
+    for key in ["bm25_rank", "bm25_score", "dense_rank", "dense_score"]:
+        if key in result:
+            trimmed[key] = result[key]
+
+    return trimmed
 
 
 def build_bm25_runner(chunks: list[dict]):
@@ -133,6 +140,43 @@ def build_dense_runner(
             timeout=timeout,
             top_k=top_k,
             metric=metric,
+        )
+
+    return run
+
+
+def build_hybrid_runner(
+    chunks: list[dict],
+    model: str,
+    ollama_url: str,
+    timeout: int,
+    rebuild_cache: bool,
+    candidate_k: int,
+    rrf_k: int,
+):
+    bm25 = bm25_retriever.build_bm25(chunks)
+    dense_ollama_retriever.check_ollama(ollama_url, timeout)
+    embeddings = dense_ollama_retriever.build_or_load_embeddings(
+        chunks=chunks,
+        model=model,
+        ollama_url=ollama_url,
+        cache_path=dense_ollama_retriever.EMBEDDINGS_PATH,
+        rebuild_cache=rebuild_cache,
+        timeout=timeout,
+    )
+
+    def run(query: str, top_k: int) -> list[dict]:
+        return hybrid_retriever.search(
+            query=query,
+            chunks=chunks,
+            bm25=bm25,
+            embeddings=embeddings,
+            model=model,
+            ollama_url=ollama_url,
+            timeout=timeout,
+            top_k=top_k,
+            candidate_k=candidate_k,
+            rrf_k=rrf_k,
         )
 
     return run
@@ -238,7 +282,7 @@ def main() -> None:
         "--methods",
         nargs="+",
         default=["bm25", "tfidf", "dense"],
-        choices=["bm25", "tfidf", "dense", "dense_euclidean"],
+        choices=["bm25", "tfidf", "dense", "dense_euclidean", "hybrid"],
         help="Retrievers to compare",
     )
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH, help="JSON output path")
@@ -253,6 +297,18 @@ def main() -> None:
     parser.add_argument("--ollama-url", default=dense_ollama_retriever.DEFAULT_OLLAMA_URL)
     parser.add_argument("--timeout", type=int, default=dense_ollama_retriever.DEFAULT_TIMEOUT)
     parser.add_argument("--rebuild-dense-cache", action="store_true")
+    parser.add_argument(
+        "--candidate-k",
+        type=int,
+        default=hybrid_retriever.DEFAULT_CANDIDATE_K,
+        help="Number of BM25 and dense candidates to fuse for hybrid",
+    )
+    parser.add_argument(
+        "--rrf-k",
+        type=int,
+        default=hybrid_retriever.DEFAULT_RRF_K,
+        help="RRF smoothing constant for hybrid",
+    )
     args = parser.parse_args()
 
     queries = args.queries or DEFAULT_QUERIES
@@ -280,6 +336,16 @@ def main() -> None:
             timeout=args.timeout,
             rebuild_cache=args.rebuild_dense_cache,
             metric="euclidean",
+        )
+    if "hybrid" in args.methods:
+        runners["hybrid"] = build_hybrid_runner(
+            chunks=chunks,
+            model=args.model,
+            ollama_url=args.ollama_url,
+            timeout=args.timeout,
+            rebuild_cache=args.rebuild_dense_cache,
+            candidate_k=args.candidate_k,
+            rrf_k=args.rrf_k,
         )
 
     comparison = []
