@@ -1,5 +1,54 @@
 # wikiRAG
 
+## Score Fusion Retrieval
+
+BM25와 Dense의 후보 점수를 각각 0~1로 Min-Max 정규화한 뒤 가중합합니다.
+
+```text
+score = (
+  bm25_weight * normalized_bm25
+  + dense_weight * normalized_dense
+) / (bm25_weight + dense_weight)
+```
+
+```powershell
+python .\scripts\retrieval\score_fusion_retriever.py `
+  "Which club won the K3 League in 2008?" `
+  --top-k 5 `
+  --candidate-k 20
+```
+
+## Retriever Evaluation
+
+980개 Wikipedia 엔티티와 6,488개 chunk를 검색 대상으로 사용하고,
+200개 엔티티에서 생성한 1,000개의 라벨 query로 BM25, TF-IDF, Dense,
+RRF Hybrid, Score Fusion을 평가합니다. Dense 계열 평가를 위해 Ollama가
+실행 중이어야 합니다.
+
+```powershell
+python .\scripts\evaluation\evaluate_retrievers.py `
+  --methods bm25 tfidf dense hybrid score_fusion `
+  --top-k 5
+```
+
+평가 입력과 결과:
+
+- `data/evaluation/wikipedia_retrieval_queries.jsonl`: 개발용 100개 query
+- `data/evaluation/wikipedia_retrieval_queries_test.jsonl`: 최종 평가용 1,000개 query
+- `data/evaluation/wikipedia_retrieval_evaluation_test.json`: 전체 수치와 query별 결과
+- `data/evaluation/wikipedia_retrieval_evaluation_test.md`: 자동 생성된 최종 성능표
+- `data/evaluation/wikipedia_retrieval_evaluation_test_analysis.md`: 결과 해석과 한계
+- `data/evaluation/wikipedia_similarity_metric_evaluation_980.md`: 유사도 비교 결과
+- `data/evaluation/wikipedia_tfidf_metric_evaluation_980.md`: TF-IDF 전용 분석
+
+빠른 동작 확인에는 일부 query만 실행할 수 있습니다.
+
+```powershell
+python .\scripts\evaluation\evaluate_retrievers.py `
+  --methods bm25 tfidf `
+  --per-type-limit 2
+```
+
 ## Wikipedia RAG Generation
 
 Hybrid retriever가 찾은 Wikipedia chunk를 context로 사용해 Ollama가 답변을 생성합니다.
@@ -347,10 +396,10 @@ data/processed/retriever_comparison.md
 
 ## 평가 쿼리 기반 분석
 
-평가용 query 파일:
+최종 평가용 query 파일:
 
 ```text
-data/evaluation/retrieval_eval_queries.jsonl
+data/evaluation/wikipedia_retrieval_queries_test.jsonl
 ```
 
 평가 실행:
@@ -370,7 +419,9 @@ python3 scripts/evaluation/evaluate_retrievers.py
 출력 파일:
 
 ```text
-data/processed/retriever_evaluation.md
+data/evaluation/wikipedia_retrieval_evaluation_test.json
+data/evaluation/wikipedia_retrieval_evaluation_test.md
+data/evaluation/wikipedia_retrieval_evaluation_test_analysis.md
 ```
 
 ## 자주 발생하는 문제

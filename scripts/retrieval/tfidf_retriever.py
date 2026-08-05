@@ -41,7 +41,7 @@ def load_chunks(path: Path) -> list[dict]:
     return chunks
 
 
-def build_tfidf(
+def build_tfidf( #모든 청크를 TF-IDF 벡터로 변환
     chunks: list[dict],
     normalize: bool = True,
 ) -> tuple[TfidfVectorizer, object]:
@@ -49,6 +49,12 @@ def build_tfidf(
     # norm="l2"는 각 chunk 벡터 길이를 1에 가깝게 맞춘다.
     # normalize=False이면 벡터 크기 차이가 살아나서 euclidean 실험에 유용하다.
     vectorizer = TfidfVectorizer(
+#         텍스트 토큰화
+# →     전체 단어 목록 생성
+# →     단어별 TF 계산
+# →     단어별 IDF 계산
+# →     각 청크를 TF-IDF 벡터로 변환
+# →     선택적으로 L2 정규화
         tokenizer=tokenize,
         lowercase=False,
         token_pattern=None,
@@ -57,13 +63,12 @@ def build_tfidf(
     matrix = vectorizer.fit_transform(documents)
     return vectorizer, matrix
 
-
+# 질문 벡터와 청크 벡터의 유사도를 계산하는 함수
 def score_tfidf(query_vector: object, matrix: object, metric: str) -> list[float]:
     if metric == "cosine":
         return cosine_similarity(query_vector, matrix).flatten().tolist()
 
     if metric == "euclidean":
-        # 거리는 작을수록 좋으므로 0~1 범위의 similarity 점수로 바꾼다.
         distances = euclidean_distances(query_vector, matrix).flatten()
         return (1 / (1 + distances)).tolist()
 

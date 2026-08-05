@@ -99,6 +99,35 @@ def embed_text(text: str, model: str, ollama_url: str, timeout: int) -> list[flo
     return embedding
 
 # Cosine similarity 계산 함수
+def embed_texts(
+    texts: list[str],
+    model: str,
+    ollama_url: str,
+    timeout: int,
+) -> list[list[float]]:
+    """Embed multiple texts in one Ollama request when batch input is supported."""
+    if not texts:
+        return []
+
+    endpoint = f"{ollama_url.rstrip('/')}/api/embed"
+    payload = {"model": model, "input": texts}
+    response = post_json(endpoint, payload, timeout)
+    embeddings = response.get("embeddings")
+
+    if (
+        isinstance(embeddings, list)
+        and len(embeddings) == len(texts)
+        and all(isinstance(embedding, list) for embedding in embeddings)
+    ):
+        return embeddings
+
+    # Older Ollama versions may not support batched input.
+    return [
+        embed_text(text, model, ollama_url, timeout)
+        for text in texts
+    ]
+
+
 def cosine_similarity(left: list[float], right: list[float]) -> float:
     dot = sum(a * b for a, b in zip(left, right))
     left_norm = math.sqrt(sum(a * a for a in left))
@@ -113,7 +142,7 @@ def euclidean_distance(left: list[float], right: list[float]) -> float:
 
 def euclidean_similarity(left: list[float], right: list[float]) -> float:
     distance = euclidean_distance(left, right)
-    return 1 / (1 + distance)  # Convert distance to similarity score
+    return 1 / (1 + distance) 
 
 
 def embedding_similarity(

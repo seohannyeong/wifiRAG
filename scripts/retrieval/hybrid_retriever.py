@@ -1,6 +1,5 @@
 from pathlib import Path
 import argparse
-import json
 import sys
 
 
@@ -19,9 +18,9 @@ if hasattr(sys.stdout, "reconfigure"):
 
 
 DEFAULT_RRF_K = 60
-DEFAULT_CANDIDATE_K = 20
-DEFAULT_BM25_WEIGHT = 1.0
-DEFAULT_DENSE_WEIGHT = 1.0
+DEFAULT_CANDIDATE_K = 20 #BM25와 Dense에서 각각 20개 후보 검색
+DEFAULT_BM25_WEIGHT = 1.0 #BM25 순위의 영향력
+DEFAULT_DENSE_WEIGHT = 1.0 #Dense 순위의 영향력
 
 
 def load_chunks(path: Path) -> list[dict]:
@@ -42,6 +41,10 @@ def reciprocal_rank(rank: int | None, rrf_k: int) -> float:
     if rank is None:
         return 0.0
     return 1 / (rrf_k + rank)
+
+
+def rrf_contribution(rank: int | None, rrf_k: int, weight: float) -> float:
+    return weight * reciprocal_rank(rank, rrf_k)
 
 
 def validate_weights(bm25_weight: float, dense_weight: float) -> None:
@@ -69,13 +72,16 @@ def rrf_fusion(
 
     fused_results = []
     for chunk_id in candidate_ids:
-        bm25_rank = bm25_by_id.get(chunk_id, {}).get("rank")
-        dense_rank = dense_by_id.get(chunk_id, {}).get("rank")
-        bm25_score = bm25_by_id.get(chunk_id, {}).get("score")
-        dense_score = dense_by_id.get(chunk_id, {}).get("score")
+        bm25_result = bm25_by_id.get(chunk_id)
+        dense_result = dense_by_id.get(chunk_id)
 
-        bm25_rrf_score = bm25_weight * reciprocal_rank(bm25_rank, rrf_k)
-        dense_rrf_score = dense_weight * reciprocal_rank(dense_rank, rrf_k)
+        bm25_rank = bm25_result["rank"] if bm25_result else None
+        dense_rank = dense_result["rank"] if dense_result else None
+        bm25_score = bm25_result["score"] if bm25_result else None
+        dense_score = dense_result["score"] if dense_result else None
+
+        bm25_rrf_score = rrf_contribution(bm25_rank, rrf_k, bm25_weight)
+        dense_rrf_score = rrf_contribution(dense_rank, rrf_k, dense_weight)
         hybrid_score = bm25_rrf_score + dense_rrf_score
 
         chunk = chunk_by_id[chunk_id]
@@ -96,7 +102,13 @@ def rrf_fusion(
             }
         )
 
-    return sorted(fused_results, key=lambda item: item["score"], reverse=True)[:top_k]
+    return sorted(
+        fused_results,
+        key=lambda item: (
+            -item["score"],
+            item["chunk_id"],
+        ),
+    )[:top_k]
 
 
 def search(
@@ -169,7 +181,7 @@ def format_optional_score(score: float | None) -> str:
     return f"{score:.4f}"
 
 
-def main() -> None:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Search Wikipedia chunks with BM25 + dense cosine RRF hybrid."
     )
@@ -203,8 +215,10 @@ def main() -> None:
     parser.add_argument("--ollama-url", default=dense_ollama_retriever.DEFAULT_OLLAMA_URL)
     parser.add_argument("--timeout", type=int, default=dense_ollama_retriever.DEFAULT_TIMEOUT)
     parser.add_argument("--rebuild-dense-cache", action="store_true")
-    args = parser.parse_args()
+    return parser
 
+
+def prepare_retrievers(args) -> tuple[list[dict], object, list[dict]]:
     chunks = load_chunks(CHUNKS_PATH)
     bm25 = bm25_retriever.build_bm25(chunks)
     dense_ollama_retriever.check_ollama(args.ollama_url, args.timeout)
@@ -216,25 +230,34 @@ def main() -> None:
         rebuild_cache=args.rebuild_dense_cache,
         timeout=args.timeout,
     )
+    return chunks, bm25, embeddings
 
-    if args.query:
-        results = search(
-            query=args.query,
-            chunks=chunks,
-            bm25=bm25,
-            embeddings=embeddings,
-            model=args.model,
-            ollama_url=args.ollama_url,
-            timeout=args.timeout,
-            top_k=args.top_k,
-            candidate_k=args.candidate_k,
-            rrf_k=args.rrf_k,
-            bm25_weight=args.bm25_weight,
-            dense_weight=args.dense_weight,
-        )
-        print_results(args.query, results)
-        return
 
+def search_and_print(
+    query: str,
+    args,
+    chunks: list[dict],
+    bm25,
+    embeddings: list[dict],
+) -> None:
+    results = search(
+        query=query,
+        chunks=chunks,
+        bm25=bm25,
+        embeddings=embeddings,
+        model=args.model,
+        ollama_url=args.ollama_url,
+        timeout=args.timeout,
+        top_k=args.top_k,
+        candidate_k=args.candidate_k,
+        rrf_k=args.rrf_k,
+        bm25_weight=args.bm25_weight,
+        dense_weight=args.dense_weight,
+    )
+    print_results(query, results)
+
+
+def interactive_search(args, chunks, bm25, embeddings) -> None:
     print("Hybrid retriever is ready. Type a query, or type 'exit' to quit.")
     while True:
         query = input("\nQuery> ").strip()
@@ -243,21 +266,18 @@ def main() -> None:
         if not query:
             continue
 
-        results = search(
-            query=query,
-            chunks=chunks,
-            bm25=bm25,
-            embeddings=embeddings,
-            model=args.model,
-            ollama_url=args.ollama_url,
-            timeout=args.timeout,
-            top_k=args.top_k,
-            candidate_k=args.candidate_k,
-            rrf_k=args.rrf_k,
-            bm25_weight=args.bm25_weight,
-            dense_weight=args.dense_weight,
-        )
-        print_results(query, results)
+        search_and_print(query, args, chunks, bm25, embeddings)
+
+
+def main() -> None:
+    args = build_parser().parse_args()
+    chunks, bm25, embeddings = prepare_retrievers(args)
+
+    if args.query:
+        search_and_print(args.query, args, chunks, bm25, embeddings)
+        return
+
+    interactive_search(args, chunks, bm25, embeddings)
 
 
 if __name__ == "__main__":
